@@ -4,8 +4,6 @@
 
 **Study assistant:** GPT LLM
 
-## What is a Graph?
-
 Graph theory is about solving real-world connection problems.
 
 Examples:
