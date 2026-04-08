@@ -44,6 +44,8 @@ That’s the real value of graph theory. It doesn’t just help you draw connect
 
 ## Fundamental Concepts
 
+### Fundamentals
+
 * The Definition
 * Graphs as Models
 * Matrices and Isomorphism
