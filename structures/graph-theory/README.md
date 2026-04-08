@@ -46,7 +46,7 @@ That’s the real value of graph theory. It doesn’t just help you draw connect
 
 ### Fundamentals
 
-* The Definition
+* [The Definition](./fundamentals/DEFINITION.md)
 * Graphs as Models
 * Matrices and Isomorphism
 * Decomposition and Special Graphs
