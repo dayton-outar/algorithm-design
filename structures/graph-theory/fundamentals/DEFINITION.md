@@ -30,4 +30,4 @@ From the graph on the right, each edge connects a pair of vertices (its endpoint
 * $(e_6: (x, y))$
 * $(e_7: (z, y))$
 
-Notice that some pairs repeat (e.g., $(e_1)$ and $(e_2)$), which indicates multiple edges between the same two vertices.
+Notice that some pairs repeat (e.g., $(e_1)$ and $(e_2)$ ), which indicates multiple edges between the same two vertices.
