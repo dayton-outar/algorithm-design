@@ -44,7 +44,7 @@ $$
 
 This situation appears naturally in the Königsberg bridge graph, where certain land masses are connected by more than one bridge. Each bridge is represented by a distinct edge, even when it connects the same two vertices.
 
-Such as the edges (e_1) and (e_2) in the Königsberg bridge graph, where
+Such as the edges $(e_1)$ and $(e_2)$ in the Königsberg bridge graph, where
 
 $$
 e_1 = (w, x), \quad e_2 = (w, x), \quad \text{with } e_1 \neq e_2.
