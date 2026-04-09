@@ -16,5 +16,18 @@ The Königsberg Bridge Problem is said to have been the origin of graph theory.
 
 ![Königsberg Bridge Illustrations](/.attachments/königsberg.bridge.illustration.png)
 
-
 The graph on the right makes it clear why such a traversal is impossible. Every time we enter and leave a land mass, we must use two bridges incident to it. Even at the starting point, the first and last bridges can be paired in the same way. Therefore, for such a route to exist, each land mass must be connected by an even number of bridges. In Königsberg, however, this condition fails—each land mass is connected by an odd number of bridges—so the desired traversal cannot exist.
+
+A graph $(G)$ consists of a set of _vertices_ $(V(G))$, a set of _edges_ $(E(G))$, and a _relation_ that assigns to each edge a pair of vertices, called its endpoints.
+
+From the graph on the right, each edge connects a pair of vertices (its endpoints). The endpoint relations are:
+
+* $(e_1: (w, x))$
+* $(e_2: (w, x))$
+* $(e_3: (w, z))$
+* $(e_4: (w, z))$
+* $(e_5: (w, y))$
+* $(e_6: (x, y))$
+* $(e_7: (z, y))$
+
+Notice that some pairs repeat (e.g., $(e_1)$ and $(e_2)$), which indicates multiple edges between the same two vertices.
