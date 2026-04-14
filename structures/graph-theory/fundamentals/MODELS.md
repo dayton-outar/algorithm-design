@@ -136,3 +136,7 @@ A subgraph of a graph ${G}$ is a graph ${H}$ where ${V(H) \subseteq V(G)}$ and $
 A graph ${G}$ is **connected** if every pair of vertices is linked by a path. Otherwise, it is **disconnected**.
 
 The graph shown under **[Example: Scheduling and graph coloring](#example-scheduling-and-graph-coloring)** contains three subgraphs that are cycles. That graph is connected, but the graph in **[Example: Job assignments and bipartite graphs](#example-job-assignments-and-bipartite-graphs)** is not.
+
+## Videos
+
+1. [2.1 An application of graph coloring: Scheduling](https://youtu.be/1640Iem-8Hc?si=rLt3EuW26K9mxP1O)
