@@ -14,3 +14,7 @@ How you define these matrices (and vertex degrees) changes if loops are allowed,
 
 **Remarks.**
 An adjacency matrix depends on how you order the vertices. Every adjacency matrix is symmetric ${(a_{ij} = a_{ji})}$. In a simple graph, entries are 0 or 1, and the diagonal contains only zeros. The degree of a vertex equals the sum of its row entries in either the adjacency or incidence matrix.
+
+For the loopless graph ${G}$ shown below, we present both the adjacency matrix and the incidence matrix corresponding to the vertex ordering ${w}$, ${x}$, ${y}$, ${z}$ and the edge ordering ${a}$, ${b}$, ${c}$, ${d}$, ${e}$. The degree of ${y}$ is ${4}$, which can be determined either by inspection of the graph or by summing the entries in the row corresponding to ${y}$ in either matrix.
+
+![Graph Matrices](/.attachments/g.graph.matrices.png)
