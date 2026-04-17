@@ -184,3 +184,5 @@ For example, there are ${64}$ simple graphs on a fixed set of four vertices. The
 Because isomorphism classes have different sizes, you cannot count them by simply dividing ${2^{\binom{n}{2}}}$ by the size of a class.
 
 ![11 Isomorphic Graphs](/.attachments/11.graphs.png)
+
+The fact that ${P_4 \cong \overline{P_4}}$ suggests a broader class of problems, which we discuss in [Decomposition and Special Graphs](./DECOMPOSITION.md).
