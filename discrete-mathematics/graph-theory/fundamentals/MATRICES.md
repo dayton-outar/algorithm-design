@@ -113,6 +113,8 @@ Using names and notation is still useful when working with isomorphism classes. 
 
 A **complete graph** is a simple graph where every pair of vertices is adjacent. The complete graph with ${n}$ vertices is denoted ${K_n}$.
 
+![Complete Graphs](/.attachments/complete-graphs-k5.k2.3.png)
+
 A **complete bipartite graph** (or *biclique*) is a simple bipartite graph where every vertex in one part connects to every vertex in the other part. If the two parts have sizes ${r}$ and ${s}$, we denote it by ${K_{r,s}}$.
 
 ---
@@ -122,3 +124,63 @@ A complete graph is the same as a graph where all vertices are pairwise adjacent
 
 ---
 
+In bipartite graphs, we often shorten “complete bipartite graph” to **biclique**. This name reminds us that a general bipartite graph is *not* necessarily complete.
+
+---
+
+**Remark (A graph by any other name):**
+When we name a graph without specifying vertex labels, we usually mean its isomorphism class.
+
+For example, saying “${H}$ is a subgraph of ${G}$” means that some graph isomorphic to ${H}$ appears as a subgraph of ${G}$. Likewise, saying “${G}$ contains a copy of ${H}$” means ${G}$ has a subgraph isomorphic to ${H}$.
+
+So, when we say ${G}$ contains ${K_5}$, we mean ${G}$ has a subgraph isomorphic to the complete graph on 5 vertices. Similarly, asking whether ${G}$ “is” ${C_n}$ means asking whether ${G}$ is isomorphic to a cycle with ${n}$ vertices.
+
+---
+
+A graph’s structure comes entirely from its adjacency relationships, and isomorphisms preserve this structure.
+
+To prove two graphs ${G}$ and ${H}$ are *not* isomorphic, find a structural property where they differ—for example:
+
+* different number of edges
+* different subgraphs
+* different complements
+
+Any such difference proves they are not isomorphic.
+
+However, matching a few properties is not enough to prove ${G \cong H}$. To prove isomorphism, you must construct a bijection ${f: V(G) \rightarrow V(H)}$ that preserves adjacency.
+
+---
+
+**Example (Isomorphic or not?):**
+Each graph has six vertices, nine edges, and is connected, but they are not all isomorphic.
+
+To prove ${G_1 \cong G_2}$, assign labels to the vertices and define a bijection that preserves adjacency. For instance, mapping ${u, v, w, x, y, z}$ to ${1, 3, 5, 2, 4, 6}$ works. Another valid mapping also shows the same result.
+
+Graphs ${G_1}$ and ${G_2}$ are bipartite and can be drawn as ${K_{3,3}}$.
+
+Graph ${G_3}$ also contains ${K_{3,3}}$, but its vertices cannot be split into two independent sets, so it is not bipartite. Therefore, ${G_3}$ is not isomorphic to the others.
+
+You can also use complements: graphs ${G}$ and ${H}$ are isomorphic if and only if their complements are isomorphic. In this case, the complements of ${G_1}$, ${G_2}$, and ${G_4}$ each form two disjoint 3-cycles, while the complement of ${G_3}$ is a single 6-cycle and remains connected. This confirms ${G_3}$ is different.
+
+![Graphs that are not isomorphic](/.attachments/not.isomorphic.graphs.png)
+
+---
+
+**Example (Counting graphs):**
+To count the number of edges in a graph with ${n}$ vertices, choose two distinct vertices. Since order does not matter, the number of possible edges is:
+
+${n(n - 1)/2}$
+
+The notation for the number of ways to choose ${k}$ elements from ${n}$ is ${\binom{n}{k}}$, read “${n}$ choose ${k}$.” These are called **binomial coefficients**.
+
+In a simple graph with vertex set ${X}$ of size ${n}$, each pair of vertices can either form an edge or not. Since each pair is an independent choice, the total number of simple graphs on ${X}$ is:
+
+${2^{\binom{n}{2}}}$
+
+---
+
+For example, there are ${64}$ simple graphs on a fixed set of four vertices. These graphs fall into only ${11}$ isomorphism classes. The classes come in complementary pairs, except for ${P_4}$, which is isomorphic to its complement.
+
+Because isomorphism classes have different sizes, you cannot count them by simply dividing ${2^{\binom{n}{2}}}$ by the size of a class.
+
+![11 Isomorphic Graphs](/.attachments/11.graphs.png)
