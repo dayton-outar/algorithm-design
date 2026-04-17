@@ -7,8 +7,8 @@ Most of the problems found in this folder were sourced from,
 
 Lessons can be found in the following,
 
- - [Fundamentals of Data Structures and Algorithms](./structures/)
- - [Design Pattern Philosophies](./philosophies/)
+ - [Fundamentals of Data Structures and Algorithms](./discrete-mathematics/)
+ - [Design Patterns & Philosophies](./patterns-philosophies/)
  - [Codility Lessons and Challenges](./codility/)
  - [LeetCode Problems and Solutions](./leetcode/)
 
