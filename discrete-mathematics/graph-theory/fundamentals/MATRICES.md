@@ -131,7 +131,7 @@ In bipartite graphs, we often shorten “complete bipartite graph” to **bicliq
 **Remark (A graph by any other name):**
 When we name a graph without specifying vertex labels, we usually mean its isomorphism class.
 
-For example, saying “${H}$ is a subgraph of ${G}$” means that some graph isomorphic to ${H}$ appears as a subgraph of ${G}$. Likewise, saying “${G}$ contains a copy of ${H}$” means ${G}$ has a subgraph isomorphic to ${H}$.
+For example, saying “ ${H}$ is a subgraph of ${G}$” means that some graph isomorphic to ${H}$ appears as a subgraph of ${G}$. Likewise, saying “ ${G}$ contains a copy of ${H}$” means ${G}$ has a subgraph isomorphic to ${H}$.
 
 So, when we say ${G}$ contains ${K_5}$, we mean ${G}$ has a subgraph isomorphic to the complete graph on 5 vertices. Similarly, asking whether ${G}$ “is” ${C_n}$ means asking whether ${G}$ is isomorphic to a cycle with ${n}$ vertices.
 
@@ -171,7 +171,7 @@ To count the number of edges in a graph with ${n}$ vertices, choose two distinct
 
 ${n(n - 1)/2}$
 
-The notation for the number of ways to choose ${k}$ elements from ${n}$ is ${\binom{n}{k}}$, read “${n}$ choose ${k}$.” These are called **binomial coefficients**.
+The notation for the number of ways to choose ${k}$ elements from ${n}$ is ${\binom{n}{k}}$, read “ ${n}$ choose ${k}$.” These are called **binomial coefficients**.
 
 In a simple graph with vertex set ${X}$ of size ${n}$, each pair of vertices can either form an edge or not. Since each pair is an independent choice, the total number of simple graphs on ${X}$ is:
 
@@ -186,3 +186,7 @@ Because isomorphism classes have different sizes, you cannot count them by simpl
 ![11 Isomorphic Graphs](/.attachments/11.graphs.png)
 
 The fact that ${P_4 \cong \overline{P_4}}$ suggests a broader class of problems, which we discuss in [Decomposition and Special Graphs](./DECOMPOSITION.md).
+
+## Videos
+
+1. [What are Isomorphic Graphs? | Graph Isomorphism, Graph Theory](https://youtu.be/EwV4Puk2coU?si=STQv4NBd-n-ZAOLM)

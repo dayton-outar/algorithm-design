@@ -1,18 +1,18 @@
 # Data Structures and Algorithms in JavaScript
 
-Most of the problems found in this folder were sourced from,
+Lessons can be found in the following,
+
+ - [Fundamentals of Data Structures and Algorithms](./structures-algorithms/)
+ - [Discrete Mathematics](./discrete-mathematics/)
+ - [Design Patterns & Philosophies](./patterns-philosophies/)
+ - [Codility Lessons and Challenges](./lessons/codility/)
+ - [LeetCode Problems and Solutions](./lessons/leetcode/)
+
+
+## More Lessons
 
 1. [Codility](https://app.codility.com/programmers/)
 2. [Leetcode](https://leetcode.com/)
-
-Lessons can be found in the following,
-
- - [Fundamentals of Data Structures and Algorithms](./discrete-mathematics/)
- - [Design Patterns & Philosophies](./patterns-philosophies/)
- - [Codility Lessons and Challenges](./codility/)
- - [LeetCode Problems and Solutions](./leetcode/)
-
-
 
 ## Further Reading
 
