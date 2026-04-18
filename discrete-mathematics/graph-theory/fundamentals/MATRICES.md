@@ -117,6 +117,10 @@ A **complete graph** is a simple graph where every pair of vertices is adjacent.
 
 A **complete bipartite graph** (or *biclique*) is a simple bipartite graph where every vertex in one part connects to every vertex in the other part. If the two parts have sizes ${r}$ and ${s}$, we denote it by ${K_{r,s}}$.
 
+See below ${K_{3,2}}$ complete bipartite graph with vertices coloured.
+
+![Another Complete Bipartite Graph](/.attachments/complete.bipartite.3-2.graph.png)
+
 ---
 
 **Remark:**
