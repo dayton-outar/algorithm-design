@@ -55,7 +55,7 @@ We won’t focus on this case here since we’re working with simple graphs.
 
 ---
 
-Since isomorphism works both ways, if ${G}$ is isomorphic to ${H}$, then ${H}$ is isomorphic to ${G}$. So we say “${G}$ and ${H}$ are isomorphic.” The term *isomorphic* applies to pairs of graphs, not to a single graph.
+Since isomorphism works both ways, if ${G}$ is isomorphic to ${H}$, then ${H}$ is isomorphic to ${G}$. So we say “ ${G}$ and ${H}$ are isomorphic.” The term *isomorphic* applies to pairs of graphs, not to a single graph.
 
 You can also describe a set of graphs as *pairwise isomorphic* (taken two at a time), but not as “an isomorphic set.”
 
