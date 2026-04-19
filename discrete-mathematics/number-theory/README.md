@@ -12,21 +12,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ---
 
-## [The Series of Primes I](./PRIMES-1.md)
-
-## The Series of Primes II
-
-* First proof of Euclid’s second theorem
-* Further deductions from Euclid’s argument
-* Primes in certain arithmetical progressions
-* Second proof of Euclid’s theorem
-* Fermat’s and Mersenne’s numbers
-* Third proof of Euclid’s theorem
-* Further results on formulae for primes
-* Unsolved problems concerning primes
-* Moduli of integers
-* Proof of the fundamental theorem of arithmetic
-* Another proof of the fundamental theorem
+## [The Series of Primes](./PRIMES.md)
 
 ### Farey Series and a Theorem of Minkowski
 
