@@ -26,8 +26,6 @@ Basic properties:
 * If ${b \mid a}$ and ${b \mid c}$, then ${b \mid (a + c)}$
 * If ${b \mid a}$, then ${b \mid ac}$ for any integer ${c}$
 
----
-
 ## Prime and Composite Numbers
 
 A **prime number** is a positive integer ${p > 1}$ with exactly two positive divisors: ${1}$ and ${p}$.
@@ -38,8 +36,6 @@ Examples:
 
 * Prime: ${2, 3, 5, 7, 11, \ldots}$
 * Composite: ${4, 6, 8, 9, \ldots}$
-
----
 
 ## Every Number Factors into Primes
 
@@ -53,8 +49,6 @@ If ${n}$ is composite, we can keep factoring it into smaller factors. This proce
 ${n = p_1 p_2 \cdots p_k}$
 
 where each ${p_i}$ is prime.
-
----
 
 ## Fundamental Theorem of Arithmetic
 
@@ -71,8 +65,6 @@ where:
 
 This is the backbone of number theory: **prime factorization is unique**.
 
----
-
 ## Euclid’s Lemma
 
 If a prime ${p}$ divides a product ${ab}$, then:
@@ -80,8 +72,6 @@ If a prime ${p}$ divides a product ${ab}$, then:
 ${p \mid a \quad \text{or} \quad p \mid b}$
 
 This result is critical for proving uniqueness of factorization.
-
----
 
 ## The Sequence of Primes
 
@@ -93,17 +83,25 @@ To generate primes efficiently, we use the **Sieve of Eratosthenes**:
 
 1. List numbers from ${2}$ to ${N}$
 2. Eliminate multiples of ${2}$, then ${3}$, then ${5}$, etc.
-3. Continue up to ${\sqrt{N}}
+3. Continue up to ${\sqrt{N}}$
 
 The remaining numbers are primes.
 
----
+## Proof That Primes Are Infinite
 
-## There Are Infinitely Many Primes
+Let ${2, 3, 5, \ldots, p}$ be all primes up to ${p}$, and define:
 
-There is no largest prime. The set of primes is infinite.
+${q = 2 \cdot 3 \cdot 5 \cdots p + 1}$
 
----
+Now:
+
+* ${q}$ is not divisible by any of these primes
+* So either ${q}$ is prime, or it has a prime factor greater than ${p}$
+
+In both cases, a larger prime exists.
+
+**Conclusion:** primes never end.
+
 
 ## Patterns in Primes
 
@@ -120,8 +118,6 @@ There are also special patterns:
 
 Many such patterns are conjectured to occur infinitely often.
 
----
-
 ## Asymptotic Notation
 
 We describe growth using:
@@ -131,8 +127,6 @@ We describe growth using:
 * ${f(x) \sim g(x)}$: same asymptotic growth
 
 These tools let us compare how functions behave as ${x \to \infty}$.
-
----
 
 ## Growth of Logarithms
 
@@ -147,8 +141,6 @@ ${\frac{x}{\log x}}$
 
 plays a central role in prime distribution.
 
----
-
 ## Prime Number Theorem
 
 Let ${\pi(x)}$ be the number of primes less than or equal to ${x}$.
@@ -162,33 +154,14 @@ This means:
 * primes thin out,
 * but in a predictable way.
 
----
 
-## Size of the n-th Prime
+## Size of the ${n^{th}}$ Prime
 
 Let ${p_n}$ be the ${n}$-th prime. Then:
 
 ${p_n \sim n \log n}$
 
 So the size of primes grows roughly like ${n \log n}$.
-
----
-
-## Another Proof That Primes Are Infinite
-
-Let ${2, 3, 5, \ldots, p}$ be all primes up to ${p}$, and define:
-
-${q = 2 \cdot 3 \cdot 5 \cdots p + 1}$
-
-Now:
-
-* ${q}$ is not divisible by any of these primes
-* So either ${q}$ is prime, or it has a prime factor greater than ${p}$
-
-In both cases, a larger prime exists.
-**Conclusion:** primes never end.
-
----
 
 ## Growth of Primes
 
@@ -208,8 +181,6 @@ ${\pi(x) \geq \log \log x}$
 
 This is weak but important: primes grow slowly, but they never stop.
 
----
-
 ## Primes in Arithmetic Progressions
 
 We can construct primes in specific forms.
@@ -224,8 +195,6 @@ Also infinitely many primes.
 
 These results come from constructing numbers that force new primes in these patterns.
 
----
-
 ## More General Result (Dirichlet)
 
 If:
@@ -239,8 +208,6 @@ There are infinitely many primes of the form:
 ${an + b}$
 
 This is a deep result: primes distribute across linear patterns.
-
----
 
 ## Fermat Numbers
 
@@ -261,8 +228,6 @@ Key property:
 
 So each introduces new prime factors → another proof of infinite primes.
 
----
-
 ## Fermat’s Conjecture (False)
 
 Fermat guessed all ${F_n}$ are prime.
@@ -272,8 +237,6 @@ But:
 * ${F_5}$ is composite
 
 In fact, most Fermat numbers are composite.
-
----
 
 ## Mersenne Primes
 
@@ -289,9 +252,7 @@ Examples:
 
 These are central to finding large primes.
 
----
-
-## Third Proof of Infinite Primes
+## Another Proof of Infinite Primes
 
 Count numbers ≤ ${x}$ not divisible by primes ≤ ${p}$.
 
@@ -309,8 +270,6 @@ which fails for large ${x}$.
 
 **Conclusion:** infinitely many primes.
 
----
-
 ## Divergence of Prime Reciprocals
 
 The series:
@@ -321,8 +280,6 @@ ${\frac{1}{2} + \frac{1}{3} + \frac{1}{5} + \frac{1}{7} + \cdots}$
 
 Even though primes thin out, their reciprocals still add up without bound.
 
----
-
 ## Bounds on Prime Growth
 
 We can sharpen earlier results:
@@ -331,8 +288,6 @@ We can sharpen earlier results:
 * ${p_n \leq 4^n}$
 
 These bounds are crude but useful.
-
----
 
 ## Can We Generate All Primes?
 
@@ -343,8 +298,6 @@ Reality:
 * No simple formula generates only primes
 * Polynomial formulas always fail eventually
 
----
-
 ## Polynomials and Primes
 
 If ${f(n)}$ is a non-constant polynomial with integer coefficients:
@@ -354,8 +307,6 @@ It **cannot** produce primes for all large ${n}$.
 However, some polynomials produce many primes for small ranges, e.g.:
 
 ${n^2 - n + 41}$
-
----
 
 ## Unsolved Problems
 
@@ -368,8 +319,6 @@ Some major open questions:
   * Every even number > 2 is the sum of two primes
 
 These remain unsolved.
-
----
 
 ## Modular Arithmetic
 
@@ -384,8 +333,6 @@ Every modulus consists of multiples of some integer ${d}$:
 
 ${S = { \ldots, -2d, -d, 0, d, 2d, \ldots }}$
 
----
-
 ## Greatest Common Divisor
 
 The greatest common divisor of ${a}$ and ${b}$ is:
@@ -393,8 +340,6 @@ The greatest common divisor of ${a}$ and ${b}$ is:
 ${(a, b)}$
 
 It is the largest integer dividing both.
-
----
 
 ## Linear Combinations
 
@@ -405,8 +350,6 @@ There exist integers ${x, y}$ such that:
 ${ax + by = d}$
 
 This is a foundational result.
-
----
 
 ## Solving Linear Equations
 
@@ -420,8 +363,6 @@ ${d \mid n}$
 
 where ${d = (a, b)}$.
 
----
-
 ## Fundamental Theorem of Arithmetic (Revisited)
 
 We now fully justify:
@@ -434,8 +375,6 @@ The proof relies on:
 * divisibility properties
 * linear combinations
 * Euclid’s lemma
-
----
 
 ## Key Takeaway
 
