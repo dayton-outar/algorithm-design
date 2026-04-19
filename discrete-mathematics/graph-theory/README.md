@@ -250,3 +250,9 @@ That’s the real value of graph theory. It doesn’t just help you draw connect
 * Eigenvalues of Regular Graphs
 * Eigenvalues and Expanders
 * Strongly Regular Graphs
+
+---
+
+## Videos
+
+1. [Graph Theory](https://youtube.com/playlist?list=PLztBpqftvzxXBhbYxoaZJmnZF6AUQr1mH&si=_IvhDWpQaJCymubg) - [Wrath of Math](https://www.youtube.com/@WrathofMath)

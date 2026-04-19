@@ -314,3 +314,9 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * L-series
 * Modular curves
 * Fermat’s last theorem
+
+---
+
+## Videos
+
+1. [Number Theory](https://www.youtube.com/playlist?list=PLr3WmPgPWZfX1HUpeyKkP6ir2wOFhqXMO) - [Glenn Olson](https://www.youtube.com/@glennolson4300)
