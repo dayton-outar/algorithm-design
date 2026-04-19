@@ -14,19 +14,9 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### [The Series of Primes](./PRIMES.md)
 
-### Farey Series and a Theorem of Minkowski
+### [Farey Series](./FAREY.md)
 
-* The definition and simplest properties of a Farey series
-* The equivalence of the two characteristic properties
-* First proof of theorems
-* Second proof of the theorems
-* The integral lattice
-* Some simple properties of the fundamental lattice
-* Third proof of the theorems
-* The Farey dissection of the continuum
-* A theorem of Minkowski
-* Proof of Minkowski’s theorem
-* Developments of the theorem
+### [Theorem of Minkowski](./MINKOWSKI.md)
 
 ### Irrational Numbers
 
