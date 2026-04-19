@@ -38,6 +38,8 @@ Here are several graphs with at most five vertices. The most important are the *
 
 The complements of the graphs in the first row are disconnected. The complement of the *house* is ${P_5}$, and the *bull* is self-complementary. Exercise 39 asks which of these graphs can decompose ${K_6}$.
 
+![Graph Menagerie](/.attachments/graph.menagerie.png)
+
 To decompose a graph ${H}$ into copies of a graph ${G}$, the number of edges in ${G}$ must divide the number of edges in ${H}$. This condition alone is not enough—for example, ${K_5}$ cannot be decomposed into two copies of the kite. 
 
 **1.1.36 Definition.**
@@ -49,6 +51,8 @@ We illustrate the Petersen graph in three different drawings above. It serves as
 Let ${[5] = {1,2,3,4,5}}$. Represent each vertex as a pair ${{a,b}}$, or simply ${ab}$. For example, ${12}$ and ${34}$ are disjoint, so they form an edge, but ${12}$ and ${23}$ do not.
 
 For each 2-set ${ab}$, three other 2-sets remain disjoint from it, so each vertex has degree 3.
+
+![Petersen Graph](/.attachments/petersen.graph.png)
 
 The Petersen graph consists of two disjoint 5-cycles, plus edges connecting corresponding vertices across the cycles. From disjointness, ${12, 34, 51, 23, 45}$ form one 5-cycle, and the remaining vertices ${13, 52, 41, 35, 24}$ form the other. Additional edges connect pairs like ${13 \sim 45}$ and ${52 \sim 34}$, as shown in the diagram.
 
