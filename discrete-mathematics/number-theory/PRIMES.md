@@ -260,11 +260,11 @@ Call this count ${N(x)}$.
 
 We can bound it:
 
-${N(x) \leq 2^{\sqrt{x}}$
+$\large{ N(x) \leq 2^{\sqrt{x}} }$
 
 If only finitely many primes existed, this would force:
 
-${x \leq 2^{\sqrt{x}}$
+$\large{ x \leq 2^{\sqrt{x}} }$
 
 which fails for large ${x}$.
 
