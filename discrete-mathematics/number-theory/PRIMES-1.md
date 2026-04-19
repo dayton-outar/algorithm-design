@@ -36,8 +36,8 @@ A **composite number** is a positive integer greater than 1 that is not prime.
 
 Examples:
 
-* Prime: ${2, 3, 5, 7, 11, \ldots}
-* Composite: ${4, 6, 8, 9, \ldots}
+* Prime: ${2, 3, 5, 7, 11, \ldots}$
+* Composite: ${4, 6, 8, 9, \ldots}$
 
 ---
 
@@ -60,7 +60,9 @@ where each ${p_i}$ is prime.
 
 Every integer ${n > 1}$ can be written uniquely (up to order) as a product of prime powers:
 
-${n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}}$
+$$\large{
+  n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}
+}$$
 
 where:
 
@@ -179,5 +181,3 @@ Primes:
 * are the building blocks of integers
 * appear irregular but follow deep statistical laws
 * connect simple arithmetic with advanced analysis
-
-This tension—simple definition, complex behavior—is what makes number theory powerful.
