@@ -12,18 +12,9 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ---
 
-### The Series of Primes I
+## [The Series of Primes I](./PRIMES-1.md)
 
-* Divisibility of integers
-* Prime numbers
-* Statement of the fundamental theorem of arithmetic
-* The sequence of primes
-* Some questions concerning primes
-* Some notations
-* The logarithmic function
-* Statement of the prime number theorem
-
-### The Series of Primes II
+## The Series of Primes II
 
 * First proof of Euclid’s second theorem
 * Further deductions from Euclid’s argument
