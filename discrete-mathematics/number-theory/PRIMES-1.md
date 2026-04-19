@@ -60,9 +60,9 @@ where each ${p_i}$ is prime.
 
 Every integer ${n > 1}$ can be written uniquely (up to order) as a product of prime powers:
 
-$$\large{
+$\large{
   n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}
-}$$
+}$
 
 where:
 
