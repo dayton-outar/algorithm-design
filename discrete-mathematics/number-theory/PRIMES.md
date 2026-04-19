@@ -102,6 +102,28 @@ In both cases, a larger prime exists.
 
 **Conclusion:** primes never end.
 
+> Euclid’s proof is a **proof by contradiction** because it starts by assuming the opposite of what it wants to prove:
+> 
+> * Assume there are only **finitely many** primes.
+> * List them all: ${p_1, p_2, \dots, p_n}$.
+> * Form the number ${N = p_1p_2\cdots p_n + 1}$.
+> 
+> Now every prime in the list leaves remainder ${1}$ when dividing ${N}$, so **none of them divides ${N}$**.
+> 
+> That creates the contradiction:
+> 
+> * either ${N}$ itself is prime, so there is a prime not in the list, or
+> * ${N}$ is composite, so it has a prime factor not in the list.
+> 
+> Either way, the claim that the list contained **all** primes is false.
+> 
+> So the conclusion is that there must be **infinitely many primes**.
+
+### Videos
+
+1. [Euclid's Proof by Contradiction](https://youtube.com/shorts/C9zAPotoSBY?si=WabkRQ9dz8kLXvQ1)
+2. [Infinite Prime Numbers Proof](https://youtube.com/shorts/kHxe4I_mjSs?si=sFD0-oETHH-AptRt)
+
 
 ## Patterns in Primes
 
