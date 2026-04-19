@@ -545,3 +545,7 @@ Refactoring must be supported by a **solid suite of automated tests** to ensure 
 
 1. [NASA's Power of Ten Coding Guide](./NASA.CODING.md)
 2. [Refactoring](https://refactoring.guru/refactoring)
+
+## Videos
+
+1. [Testable Code Doesn't Mean "Interfaces Everywhere"](https://youtu.be/9fHk8p9N5z0?si=4K6UOxLGBZaVNQUj)
