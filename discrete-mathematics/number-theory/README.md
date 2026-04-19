@@ -12,7 +12,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ---
 
-## [The Series of Primes](./PRIMES.md)
+### [The Series of Primes](./PRIMES.md)
 
 ### Farey Series and a Theorem of Minkowski
 
