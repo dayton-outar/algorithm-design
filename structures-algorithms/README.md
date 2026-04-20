@@ -16,6 +16,7 @@ Some fundamental data structures that are used for solving problems includes,
 ## Algorithms
 
 1. [Sorting](./sorting/)
+2. [Huffman Coding](./huffman/)
 
 ## Graph Traversal
 
