@@ -1,10 +1,18 @@
 # Trees
 
+![Tree showing nodes and edges](/.attachments/tree-node.edges.png)
+
 A **tree** is a hierarchical data structure made of nodes connected by edges. It starts at a **root** and branches downward into children, forming a structure with no cycles.
+
+![Definition of a tree using graphs](/.attachments/tree-graph.definition.png)
+
+![Root node of a tree](/.attachments/binary.tree-root.node.png)
 
 Unlike arrays or lists, trees organize data to reflect **relationships**, not just order.
 
----
+![Relationships in binary tree](/.attachments/binary.tree-children.png)
+
+![Leaf nodes in binary tree](/.attachments/binary.tree-leaf.nodes.png)
 
 ## What Problems Trees Solve Well
 
@@ -28,8 +36,6 @@ Trees shine when you need **structured access, fast search, or hierarchical repr
 * **Prefix and pattern matching**
   Tries and suffix trees handle string problems efficiently.
 
----
-
 ## When Not to Use Trees
 
 * If you need **constant-time lookup**, use a hash table.
@@ -42,8 +48,6 @@ Trees shine when you need **structured access, fast search, or hierarchical repr
 
 Use trees when you need **structured, scalable access to ordered or hierarchical data**. They sit in the sweet spot between raw speed (hashing) and flexibility (lists).
 
-
----
 
 ## Suffix Trees and Arrays
 
@@ -140,22 +144,20 @@ You can:
 * Use **suffix trees** for maximum power and flexibility
 * Use **suffix arrays** when you want similar performance with less complexity and memory
 
----
-
-## Kd-Trees
+## KD-Trees
 
 **Input:** A set $S$ of $n$ points (or geometric objects) in $k$ dimensions
 **Goal:** Build a tree that partitions space so each object lies in its own box-shaped region
 
 ---
 
-Kd-trees organize space by recursively splitting it into smaller regions. Each split divides the data into two groups, creating a hierarchy of regions that makes spatial queries fast.
+KD-trees organize space by recursively splitting it into smaller regions. Each split divides the data into two groups, creating a hierarchy of regions that makes spatial queries fast.
 
 To locate a point, you traverse the tree from the root, narrowing down to the smallest region that contains it, then scan the few points inside that region.
 
 ---
 
-### How Kd-Trees Work
+### How KD-Trees Work
 
 Each node splits space using a plane aligned with one dimension.
 
@@ -191,7 +193,7 @@ Different strategies exist for choosing how to split:
 
 ---
 
-### What Kd-Trees Are Good For
+### What KD-Trees Are Good For
 
 * **Point location**
   Find which region contains a query point in time proportional to tree height.
@@ -220,7 +222,7 @@ You often can’t achieve both perfectly, so you trade off depending on the data
 
 ### Limitations
 
-Kd-trees work best in **low to moderate dimensions** (roughly 2–20).
+KD-trees work best in **low to moderate dimensions** (roughly 2–20).
 
 As dimensions increase:
 
@@ -234,10 +236,8 @@ In high dimensions, performance degrades significantly.
 
 ### Key Takeaway
 
-Use kd-trees when you need fast spatial queries in low-dimensional space.
+Use KD-trees when you need fast spatial queries in low-dimensional space.
 Avoid them in high-dimensional problems—simplify the data or use alternative structures.
-
----
 
 ## Heaps
 
