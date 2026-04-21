@@ -145,6 +145,8 @@ A **self-balancing BST** that:
 * Automatically adjusts structure
 * Maintains near-equal subtree heights
 
+> **AVL** stands for **Adelson-Velsky and Landis** — the two Russian mathematicians who introduced it.
+
 ---
 
 ### Balance Condition
