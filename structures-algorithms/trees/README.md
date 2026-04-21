@@ -48,6 +48,274 @@ Trees shine when you need **structured access, fast search, or hierarchical repr
 
 Use trees when you need **structured, scalable access to ordered or hierarchical data**. They sit in the sweet spot between raw speed (hashing) and flexibility (lists).
 
+## Balanced Trees
+
+**Input:** A set of values with frequent insertions and lookups
+**Goal:** Support fast search *and* fast insertion
+
+---
+
+### The Core Problem
+
+We want:
+
+* **Fast search** → like a sorted array → ${ O(\log n) }$
+* **Fast insertion** → like a linked list → ${ O(1) }$
+
+But:
+
+* Arrays → slow insert ${ O(n) }$
+* Linked lists → slow search ${ O(n) }$
+
+So the question is:
+
+> Can we combine both advantages?
+
+![Combined Performance of Arrays and Linked Lists](/.attachments/combined.performance-array.linked.list.png)
+
+---
+
+### Binary Search Trees (BST)
+
+A **binary search tree** organizes data so that:
+
+* Left subtree → values **smaller**
+* Right subtree → values **greater**
+
+![A Balanced Tree](/.attachments/balanced.tree.illustrated.png)
+
+---
+
+### Searching in a BST
+
+To search for a value `( x )`:
+
+* Start at root
+* If `( x < node )` → go left
+* If `( x > node )` → go right
+* Repeat until found or null
+
+**Time:**
+
+* Best case: ${ O(\log n) }$
+* Worst case: ${ O(n) }$
+
+---
+
+### Why Height Matters
+
+The **height of the tree** determines performance.
+
+ (see comparison diagram on page 6)
+
+* Short tree → fewer steps → faster
+* Tall tree → more steps → slower
+
+| Case       | Height        | Search Time   |
+| ---------- | ------------- | ------------- |
+| Best case  | ${ O(\log n) }$ | ${ O(\log n) }$ |
+| Worst case | ${ O(n) }$      | ${ O(n) }$      |
+
+Worst case looks like a **linked list**.
+
+---
+
+### The Problem with BSTs
+
+If data is inserted in order:
+
+* Tree becomes **skewed**
+* Height becomes ${ O(n) }$
+* Performance degrades
+
+So:
+
+> **BSTs are only fast if they stay balanced**
+
+## AVL Trees
+
+**Goal:** Keep tree height at ${ O(\log n) }$
+
+---
+
+### What is an AVL Tree?
+
+A **self-balancing BST** that:
+
+* Automatically adjusts structure
+* Maintains near-equal subtree heights
+
+---
+
+### Balance Condition
+
+Each node tracks:
+
+* **Height**, or
+* **Balance Factor (BF)**
+
+[
+BF = height(left) - height(right)
+]
+
+Allowed values:
+
+* ( -1, 0, 1 ) → OK
+* ( < -1 ) or ( > 1 ) → **rebalance needed**
+
+ (see balance factor examples on page 13)
+
+---
+
+### Rotations (Core Idea)
+
+When tree becomes unbalanced → **rotate nodes**
+
+Example:
+
+* Left-heavy → right rotation
+* Right-heavy → left rotation
+
+ (see rotation diagram on page 11)
+
+---
+
+### Insert Operation (AVL)
+
+Steps:
+
+1. Insert like a normal BST
+2. Update height / balance factor up the tree
+3. If imbalance detected:
+
+   * Perform rotation
+4. Stop after first fix (usually enough)
+
+---
+
+### Performance
+
+| Operation | Time          |
+| --------- | ------------- |
+| Search    | ( O(\log n) ) |
+| Insert    | ( O(\log n) ) |
+
+---
+
+### Key Takeaway
+
+* BST → fast *if balanced*
+* AVL → **guarantees balance**
+* Result → consistently fast operations
+
+## Splay Trees
+
+**Idea:** Recently accessed items become faster to access again
+
+---
+
+### How It Works
+
+After accessing a node:
+
+* Move it to the **root** using rotations
+
+ (see repeated lookup example on page 18)
+
+---
+
+### Behavior
+
+* Frequently accessed nodes → near top
+* Rare nodes → deeper
+
+---
+
+### Tradeoff
+
+* Not always balanced
+* Some operations can be slow
+
+But:
+
+* **Amortized time per operation:** ( O(\log n) )
+
+---
+
+### When to Use
+
+Good when:
+
+* Access patterns are **repetitive**
+* Recently used data is likely reused
+
+## B-Trees
+
+**Goal:** Optimize for real-world storage (disk access)
+
+---
+
+### Key Idea
+
+Disk access is expensive (**seek time**).
+
+So instead of:
+
+* Many small reads → slow
+
+We do:
+
+* Fewer large reads → faster
+
+---
+
+### Structure
+
+Unlike BSTs:
+
+* Nodes can have **multiple keys**
+* Nodes can have **many children**
+
+ (see B-tree structure on page 20)
+
+---
+
+### Properties
+
+* Keys inside node are **sorted**
+* Children split value ranges
+* Number of children = keys + 1
+
+---
+
+### Why B-Trees Are Fast
+
+* Fewer levels → fewer disk reads
+* More data per node → better throughput
+
+Analogy:
+
+> One trip to the grocery store vs multiple trips
+
+---
+
+### Performance
+
+| Operation | Time          |
+| --------- | ------------- |
+| Search    | ( O(\log n) ) |
+| Insert    | ( O(\log n) ) |
+
+But with **much fewer disk operations**
+
+---
+
+### Where They Are Used
+
+* Databases
+* File systems
+* Storage engines
+
 
 ## Suffix Trees and Arrays
 
@@ -388,3 +656,27 @@ Use a heap when you care about **priority over order**.
 It’s the simplest and most efficient way to repeatedly answer:
 
 > “What’s the next best thing to process?”
+
+## Final Takeaway
+
+* **BST** → simple, but unstable performance
+* **AVL trees** → guaranteed ${ O(\log n) }$, strict balance
+* **Splay trees** → adaptive, good for repeated access
+* **B-trees** → optimized for real-world storage systems
+* **Suffix trees** → best for **string pattern matching**
+  * Search substrings in ( O(|q|) )
+  * Heavy memory usage, very powerful
+* **KD-trees** → best for **multi-dimensional data** (e.g. points, coordinates)
+  * Efficient nearest neighbor search
+  * Common in graphics, ML, spatial queries
+* **Heaps** → best for **priority-based operations**
+  * Fast access to min/max in ( O(1) )
+  * Insert/delete in ( O(\log n) )
+  * Used in priority queues, scheduling, Dijkstra
+
+> If performance must be consistent → use **balanced trees**
+> If access patterns repeat → use **splay trees**
+> If working with strings → use **suffix trees**
+> If working with spatial data → use **KD-trees**
+> If working with priorities → use **heaps**
+> If storage/disk is involved → use **B-trees**
