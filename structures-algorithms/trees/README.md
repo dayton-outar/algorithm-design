@@ -194,9 +194,7 @@ Steps:
 
 1. Insert like a normal BST
 2. Update height / balance factor up the tree
-3. If imbalance detected:
-
-   * Perform rotation
+3. If imbalance detected, perform rotation
 4. Stop after first fix (usually enough)
 
 ---
