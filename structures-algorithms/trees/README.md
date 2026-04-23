@@ -1,18 +1,18 @@
 # Trees
 
-![Tree showing nodes and edges](/.attachments/tree-node.edges.png)
+A **tree** is a hierarchical data structure made of nodes connected by edges.
 
-A **tree** is a hierarchical data structure made of nodes connected by edges. It starts at a **root** and branches downward into children, forming a structure with no cycles.
+![Definition of a tree using graphs](/.attachments/tree-graph.definition-2.png)
 
-![Definition of a tree using graphs](/.attachments/tree-graph.definition.png)
+It starts at a **root** and branches downward into children, forming a structure with no cycles.
 
-![Root node of a tree](/.attachments/binary.tree-root.node.png)
+![Root node of a tree](/.attachments/binary.tree-root.node-2.png)
 
 Unlike arrays or lists, trees organize data to reflect **relationships**, not just order.
 
-![Relationships in binary tree](/.attachments/binary.tree-children.png)
+![Relationships in binary tree](/.attachments/binary.tree-children-2.png)
 
-![Leaf nodes in binary tree](/.attachments/binary.tree-leaf.nodes.png)
+![Leaf nodes in binary tree](/.attachments/binary.tree-leaf.nodes-2.png)
 
 ## What Problems Trees Solve Well
 
@@ -106,7 +106,7 @@ To search for a value `( x )`:
 
 The **height of the tree** determines performance.
 
- (see comparison diagram on page 6)
+![Showing best and worst case of two binary trees](/.attachments/two.trees-best.case.worst.case.png)
 
 * Short tree → fewer steps → faster
 * Tall tree → more steps → slower
@@ -117,6 +117,8 @@ The **height of the tree** determines performance.
 | Worst case | ${ O(n) }$      | ${ O(n) }$      |
 
 Worst case looks like a **linked list**.
+
+![Showing big savings using balanced binary tree](/.attachments/tree.time.complexity-big.savings.png)
 
 ---
 
@@ -147,6 +149,8 @@ A **self-balancing BST** that:
 
 > **AVL** stands for **Adelson-Velsky and Landis** — the two Russian mathematicians who introduced it.
 
+![Showing the balancing of a tree](/.attachments/self.balancing-rotate.tree.png)
+
 ---
 
 ### Balance Condition
@@ -154,18 +158,20 @@ A **self-balancing BST** that:
 Each node tracks:
 
 * **Height**, or
-* **Balance Factor (BF)**
+* **Balance Factor, ${ BF }$**
 
-[
+${\large
 BF = height(left) - height(right)
-]
+}$
+
+![Examples of calculated balance factors](/.attachments/avl.balance.factor.png)
 
 Allowed values:
 
 * ( -1, 0, 1 ) → OK
 * ( < -1 ) or ( > 1 ) → **rebalance needed**
 
- (see balance factor examples on page 13)
+![Showing binary trees needing rebalancing](/.attachments/avl.rebalancing.needed.png)
 
 ---
 
