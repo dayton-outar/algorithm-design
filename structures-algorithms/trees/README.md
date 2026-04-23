@@ -201,8 +201,8 @@ See [AVL Tree in Data Structure](https://www.youtube.com/shorts/GgmJhkhH8j0)
 
 | Operation | Time          |
 | --------- | ------------- |
-| Search    | ( O(\log n) ) |
-| Insert    | ( O(\log n) ) |
+| Search    | ${ O(\log n) }$ |
+| Insert    | ${ O(\log n) }$ |
 
 ---
 
@@ -242,7 +242,7 @@ After accessing a node:
 
 But:
 
-* **Amortized time per operation:** ( O(\log n) )
+* **Amortized time per operation:** ${ O(\log n) }$
 
 ---
 
