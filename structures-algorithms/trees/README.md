@@ -157,7 +157,7 @@ Each node tracks:
 * **Balance Factor, ${ BF }$**
 
 ${\large
-BF = height(left) - height(right)
+BF = \text{height(left)} - \text{height(right)}
 }$
 
 ![Examples of calculated balance factors](/.attachments/avl.balance.factor.png)
