@@ -116,7 +116,7 @@ The **height of the tree** determines performance.
 
 Worst case looks like a **linked list**.
 
-![Showing big savings using balanced binary tree](/.attachments/tree.time.complexity-big.savings-2.png)
+![Showing big savings using balanced binary tree](/.attachments/tree.time.complexity-big.savings-3.png)
 
 ---
 
