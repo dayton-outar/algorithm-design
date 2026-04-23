@@ -147,8 +147,6 @@ A **self-balancing BST** that:
 
 > **AVL** stands for **Adelson-Velsky and Landis** — the two Russian mathematicians who introduced it.
 
-![Showing the balancing of a tree](/.attachments/self.balancing-rotate.tree.png)
-
 ---
 
 ### Balance Condition
@@ -182,7 +180,7 @@ Example:
 * Left-heavy → right rotation
 * Right-heavy → left rotation
 
- (see rotation diagram on page 11)
+![Showing the balancing of a tree](/.attachments/self.balancing-rotate.tree.png)
 
 ---
 
@@ -194,6 +192,8 @@ Steps:
 2. Update height / balance factor up the tree
 3. If imbalance detected, perform rotation
 4. Stop after first fix (usually enough)
+
+See [AVL Tree in Data Structure](https://www.youtube.com/shorts/GgmJhkhH8j0)
 
 ---
 
