@@ -12,8 +12,6 @@ Unlike arrays or lists, trees organize data to reflect **relationships**, not ju
 
 ![Relationships in binary tree](/.attachments/binary.tree-children-2.png)
 
-![Leaf nodes in binary tree](/.attachments/binary.tree-leaf.nodes-2.png)
-
 ## What Problems Trees Solve Well
 
 Trees shine when you need **structured access, fast search, or hierarchical representation**.
