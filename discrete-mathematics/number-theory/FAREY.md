@@ -14,7 +14,7 @@ We include 0 and 1 as ${\frac{0}{1}}$ and ${\frac{1}{1}}$.
 If ${\frac{h}{k}}$ and ${\frac{h'}{k'}}$ are consecutive terms in ${\mathcal{F}_n}$, then
 ${k h' - h k' = 1}$.
 
-If three consecutive terms are ${\frac{h}{k}}, \frac{h''}{k''}, \frac{h'}{k'}}$, then
+If three consecutive terms are ${\frac{h}{k}}, \frac{h''}{k''}, \frac{h'}{k'}$, then
 ${\frac{h''}{k''} = \frac{h + h'}{k + k'}}$.
 
 This middle fraction is called the mediant.
@@ -95,7 +95,7 @@ splits the arc.
 This process divides the circle into Farey arcs.
 
 Each arc associated with ${\frac{h}{k}}$ has length between
-${\frac{1}{k(2n-1)}} \quad \text{and} \quad \frac{1}{k(n+1)}}$.
+${\frac{1}{k(2n-1)}} \quad \text{and} \quad \frac{1}{k(n+1)}$.
 
 ## Approximation of Real Numbers
 
