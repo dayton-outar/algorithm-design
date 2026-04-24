@@ -224,8 +224,6 @@ After accessing a node:
 
 * Move it to the **root** using rotations
 
- (see repeated lookup example on page 18)
-
 ---
 
 ### Behavior
@@ -301,14 +299,40 @@ Analogy:
 
 > One trip to the grocery store vs multiple trips
 
+> B-trees have a very interesting optimization because it’s a physical
+> optimization. Computers are physical objects. So when we are looking
+> things up in a tree, a physical object has to move to retrieve that data.
+> This is called seek time. Seek time can be a big factor in how fast or slow
+> your algorithm is.
+>
+> Think of it like going to the grocery store. You could go shopping for
+> one item at a time. Suppose you decide to buy milk. After coming
+> home, you realize you should get some bread, too, so you go back to the
+> store. After coming home again, you realize you’re out of coffee. So you
+> go back to the store again. What an inefficient way to shop! It would be
+> much better to shop once and buy a bunch of stuff while you are there.
+> In this example, driving to and from the store is the seek time.
+> The fundamental idea with B-Trees is that once you’ve done the seek, you
+> might as well read a bunch of stuff into memory. That is, once you’re at
+> the store, you might as well buy everything you need instead of going
+> back repeatedly.
+> 
+> B-trees have bigger nodes: each node can have many more keys and
+> children than a binary tree. So we spend more time reading each node.
+> But we seek less because we read more data in one go. This is what makes
+> B-trees faster.
+> 
+> B-trees are a popular data structure for databases, which is no surprise
+> as databases spend a lot of time retrieving data from disk.
+
 ---
 
 ### Performance
 
 | Operation | Time          |
 | --------- | ------------- |
-| Search    | ( O(\log n) ) |
-| Insert    | ( O(\log n) ) |
+| Search    | ${ O(\log n) }$ |
+| Insert    | ${ O(\log n) }$ |
 
 But with **much fewer disk operations**
 
@@ -324,11 +348,11 @@ But with **much fewer disk operations**
 ## Suffix Trees and Arrays
 
 **Input:** A reference string $S$
-**Goal:** Build a data structure to quickly find all occurrences of a query string $q$ in $S$
+**Goal:** Build a data structure to quickly find all occurrences of a query string ${ q }$ in ${ S }$
 
 ---
 
-Suffix trees and suffix arrays solve string problems efficiently. When used properly, they reduce many algorithms from ${O(n^2)}$ to linear time.
+Suffix trees and suffix arrays solve string problems efficiently. When used properly, they reduce many algorithms from ${ O(n^2) }$ to linear time.
 
 ---
 
@@ -341,7 +365,7 @@ To check if a string $q$ exists:
 * Start at the root
 * Follow edges matching each character in $q$
 
-If a path breaks, the string does not exist. Otherwise, you find it in ${O(|q|)}$ time, regardless of how many strings are stored.
+If a path breaks, the string does not exist. Otherwise, you find it in ${ O(|q|) }$ time, regardless of how many strings are stored.
 
 Tries are easy to build and fast to search, but they use a lot of memory.
 
@@ -349,7 +373,7 @@ Tries are easy to build and fast to search, but they use a lot of memory.
 
 A **suffix tree** extends this idea. It stores all suffixes of $S$.
 
-Any substring of $S$ must be a prefix of some suffix. That means you can check if $q$ appears in $S$ in ${O(|q|)}$ time.
+Any substring of ${ S }$ must be a prefix of some suffix. That means you can check if $q$ appears in $S$ in ${ O(|q|) }$ time.
 
 ---
 
