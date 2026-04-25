@@ -21,6 +21,52 @@ ${[a,b] = \frac{ab}{(a,b)}}$
 
 If ${(a,b) = 1}$, then ${a}$ and ${b}$ are coprime, meaning they share no common factor greater than 1.
 
+### Example: Find HCD and LCM of ${60}$ and ${84}$
+
+#### Step 1: Prime factorization
+
+${60 = 2^2 \cdot 3 \cdot 5}$
+${84 = 2^2 \cdot 3 \cdot 7}$
+
+#### Step 2: Highest Common Divisor (HCD)
+
+Take the **minimum powers** of common primes:
+
+* For ${2}$ → ${\min(2,2) = 2}$ → ${2^2}$
+* For ${3}$ → ${\min(1,1) = 1}$ → ${3^1}$
+
+So:
+
+${(60,84) = 2^2 \cdot 3 = 4 \cdot 3 = 12}$
+
+#### Step 3: Least Common Multiple (LCM)
+
+Take the **maximum powers** of all primes:
+
+* ${2^2}$, ${3^1}$, ${5^1}$, ${7^1}$
+
+So:
+
+${[60,84] = 2^2 \cdot 3 \cdot 5 \cdot 7 = 4 \cdot 3 \cdot 5 \cdot 7 = 420}$
+
+#### Step 4: Check using identity
+
+${[a,b] = \frac{ab}{(a,b)}}$
+
+${\frac{60 \cdot 84}{12} = \frac{5040}{12} = 420}$ ✔️
+
+#### Intuition
+
+* **HCD = what they share** → overlap → ${12}$
+* **LCM = everything needed to cover both** → ${420}$
+
+If you think in systems or engineering terms:
+
+* HCD = common structure
+* LCM = full combined capacity
+
+That mental model will stick better than the formula.
+
 ## Congruences
 
 We say ${x}$ is congruent to ${a}$ modulo ${m}$ if ${m}$ divides ${x - a}$. We write:
@@ -36,6 +82,79 @@ ${0, 1, 2, \dots, m - 1}$
 Each class contains all numbers congruent to one of these values.
 
 Congruences simplify arithmetic. For example, instead of working with large numbers, we can reduce them modulo ${m}$ and work with smaller representatives.
+
+### Example: Work modulo ${7}$
+
+We say:
+
+${15 \equiv 1 \ (\text{mod } 7)}$
+
+because:
+
+${15 = 7 \cdot 2 + 1}$
+
+So both ${15}$ and ${1}$ leave the same remainder when divided by ${7}$.
+
+### Example: Simplifying calculations
+
+Compute:
+
+${38 + 45 \ (\text{mod } 7)}$
+
+Reduce first:
+
+${38 \equiv 3 \ (\text{mod } 7)}$
+${45 \equiv 3 \ (\text{mod } 7)}$
+
+Now add:
+
+${3 + 3 = 6}$
+
+So:
+
+${38 + 45 \equiv 6 \ (\text{mod } 7)}$
+
+### Example: Multiplication
+
+Compute:
+
+${38 \cdot 45 \ (\text{mod } 7)}$
+
+Reduce:
+
+${38 \equiv 3}$
+${45 \equiv 3}$
+
+Multiply:
+
+${3 \cdot 3 = 9 \equiv 2 \ (\text{mod } 7)}$
+
+### Example: Solving a congruence
+
+Solve:
+
+${2x \equiv 1 \ (\text{mod } 7)}$
+
+Try small values:
+
+* ${x = 1 \Rightarrow 2}$
+* ${x = 2 \Rightarrow 4}$
+* ${x = 3 \Rightarrow 6}$
+* ${x = 4 \Rightarrow 8 \equiv 1}$ ✔️
+
+So:
+
+${x \equiv 4 \ (\text{mod } 7)}$
+
+### What’s really going on
+
+Modulo arithmetic just means:
+
+* Ignore full multiples of ${m}$
+* Only track the remainder
+
+That’s why you can shrink big numbers into small ones and still get correct results.
+
 
 ## Properties of congruences
 
