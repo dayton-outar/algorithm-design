@@ -1,4 +1,4 @@
-# Minkowski’s Theorem and Convex Regions
+# 🔖 Minkowski’s Theorem and Convex Regions
 
 Let ${P}$ and ${Q}$ be points of ${\Lambda}$, and let ${P'}$ and ${Q'}$ be their reflections about the origin. Add to the parallelogram ${J}$ (from [Farey Dissection](./FAREY.md#farey-dissection)) the three parallelograms based on ${OQ, OP}$; ${OP, OQ'}$; and ${OQ', OP}$. This construction produces a larger parallelogram ${K}$ centered at the origin with area ${4\delta}$, four times the area of ${J}$. If ${\delta = 1}$ (its minimum value), lattice points may lie on the boundary of ${K}$ but none lie strictly inside except the origin.
 

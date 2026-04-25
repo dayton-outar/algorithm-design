@@ -16,7 +16,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### [Farey Series](./FAREY.md)
 
-### [Theorem of Minkowski](./MINKOWSKI.md)
+### 🔖 [Theorem of Minkowski](./MINKOWSKI.md)
 
 ### [Irrational Numbers](./IRRATIONAL.md)
 
