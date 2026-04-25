@@ -8,7 +8,7 @@ Strictly speaking, arithmetic does not fully cover irrationality, but many resul
 
 For instance:
 
-* Saying “${\sqrt{2}}$ is irrational” means
+* Saying “ ${\sqrt{2}}$ is irrational” means
   ${a^2 = 2b^2}$ has no integer solutions (other than trivial ones).
 
 This allows us to treat irrationality as an arithmetic property. Throughout, we focus on determining whether a given number is rational or irrational.
