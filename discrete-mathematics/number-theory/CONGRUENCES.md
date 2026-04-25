@@ -191,11 +191,37 @@ Let ${(k,m) = d}$.
 
 We can reduce the equation by dividing through by ${d}$ and solving a simpler congruence.
 
-## Complete systems of residues
+## Residues
 
 A complete system of residues modulo ${m}$ is any set of ${m}$ integers where each residue class appears exactly once.
 
 If ${(k,m) = 1}$, then multiplying each residue by ${k}$ rearranges the system but does not change it.
+
+> Modulo ${m}$, every integer falls into one of these classes:
+> 
+> ${0, 1, 2, \dots, m-1}$
+> 
+> A **complete system of residues** just means:
+> 
+> a set of ${m}$ numbers that hits each of those classes exactly once.
+
+### Example (mod ${5}$)
+
+This is the standard system:
+
+${{0,1,2,3,4}}$
+
+But these are also valid:
+
+${{5,6,7,8,9}}$ → same remainders
+${{-2,-1,0,1,2}}$ → also same remainders
+
+All of them cover **each remainder once** → complete system
+
+> Now the key claim:
+> 
+> If ${(k,m) = 1}$ (coprime), then multiplying every element by ${k}$ just **reorders** the system.
+
 
 ## Euler’s function
 
@@ -210,6 +236,17 @@ This function is multiplicative:
 If ${(m,n) = 1}$, then:
 
 ${\phi(mn) = \phi(m)\phi(n)}$
+
+### Example: Coprime with 10
+
+For ${m = 10}$
+
+Numbers: ${1,2,3,4,5,6,7,8,9}$
+Coprime with 10: ${1,3,7,9}$
+
+So:
+
+${\phi(10) = 4}$
 
 ## Trigonometric sums and exponential form
 
