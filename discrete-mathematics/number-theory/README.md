@@ -18,15 +18,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### [Theorem of Minkowski](./MINKOWSKI.md)
 
-### Irrational Numbers
-
-* Some generalities
-* Numbers known to be irrational
-* The theorem of Pythagoras and its generalizations
-* The use of the fundamental theorem in proofs
-* A historical digression
-* Geometrical proof of the irrationality of √5
-* Some more irrational numbers
+### [Irrational Numbers](./IRRATIONAL.md)
 
 ### Congruences and Residues
 
