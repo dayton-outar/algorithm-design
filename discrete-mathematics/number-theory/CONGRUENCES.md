@@ -231,6 +231,8 @@ If ${m = \prod p^{e}}$, then:
 
 > ${m}$ is built by multiplying primes raised to powers
 > 
+> ${e}$ just means exponent and not the _euler's number_
+> 
 > **Example**
 > 
 > ${60 = 2^2 \cdot 3^1 \cdot 5^1}$
