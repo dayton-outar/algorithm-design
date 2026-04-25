@@ -26,7 +26,7 @@ Significant lessons from Codility,
 
   An old but crafty way of identifying all primes up to a certain number
 
-- [Euclidean Algorithm](./euclidean/)
+- 🔖 [Euclidean Algorithm](./euclidean/)
 
   Finding common divisor and common multiples
 

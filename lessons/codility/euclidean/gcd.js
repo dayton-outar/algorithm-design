@@ -13,7 +13,7 @@ function gcdL(a, b) {
     return a;
 }
 
-console.log(`(12, 18) ==> ${gcd(12, 18)}`);
-console.log(`(24, 9) ==> ${gcd(24, 9)}`);
-console.log(`(9, 6) ==> ${gcdL(9, 6)}`);
-console.log(`(6, 3) ==> ${gcd(6, 3)}`);
+console.log(`(12, 18) ==> ${gcdL(12, 18)}`);
+// console.log(`(24, 9) ==> ${gcd(24, 9)}`);
+// console.log(`(9, 6) ==> ${gcdL(9, 6)}`);
+// console.log(`(6, 3) ==> ${gcd(6, 3)}`);
