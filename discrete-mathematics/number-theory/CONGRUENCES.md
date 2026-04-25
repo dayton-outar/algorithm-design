@@ -242,11 +242,71 @@ ${\phi(mn) = \phi(m)\phi(n)}$
 For ${m = 10}$
 
 Numbers: ${1,2,3,4,5,6,7,8,9}$
-Coprime with 10: ${1,3,7,9}$
+Coprime with ${10}$: ${1,3,7,9}$
+
+- ${(4, 10)}$ or ${\gcd(4, 10)}$ = ${2}$
+- ${(5, 10)}$ or ${\gcd(5, 10)}$ = ${5}$
+- ${(4, 10)}$ or ${\gcd(6, 10)}$ = ${2}$
+- ${(4, 10)}$ or ${\gcd(8, 10)}$ = ${2}$
 
 So:
 
 ${\phi(10) = 4}$
+
+### (Euler’s theorem)
+
+If ${(a,m) = 1}$, then:
+
+${a^{\phi(m)} \equiv 1 \ (\text{mod } m)}$
+
+
+#### Example
+
+Take ${m = 10}$ → ${\phi(10) = 4}$
+Pick ${a = 3}$ (coprime with 10)
+
+${3^4 = 81 \equiv 1 \ (\text{mod } 10)}$
+
+### The insight
+
+This is where it becomes powerful:
+
+#### (a) It lets you simplify big powers
+
+Instead of computing:
+
+${3^{100} \ (\text{mod } 10)}$
+
+You use:
+
+${3^4 \equiv 1}$
+
+So:
+
+${3^{100} = (3^4)^{25} \equiv 1^{25} = 1}$
+
+#### (b) It guarantees structure
+
+Among the “good” residues (coprime ones):
+
+* Multiplication cycles back to 1
+* Everything behaves predictably
+
+#### (c) It generalizes Fermat’s Little Theorem
+
+If ${p}$ is prime:
+
+${\phi(p) = p - 1}$
+
+So:
+
+${a^{p-1} \equiv 1 \ (\text{mod } p)}$
+
+> Euler’s function is really telling you:
+> 
+> * Which residues are **usable** (coprime ones)
+> * How many such residues exist
+> * That they form a **closed system under multiplication**
 
 ## Trigonometric sums and exponential form
 
