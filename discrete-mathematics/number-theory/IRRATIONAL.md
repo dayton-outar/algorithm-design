@@ -4,7 +4,7 @@
 
 The study of irrational numbers naturally extends arithmetic beyond integers and rational numbers into real and complex numbers. It focuses on relationships between integers, rationals, and expressions such as ${r + s\sqrt{2}}$ or ${r + s\sqrt{-5}}$, where ${r}$ and ${s}$ are rational.
 
-Strictly speaking, arithmetic does not fully cover irrationality, but many results about irrational numbers can be expressed using integer equations. For example, the statement “${\sqrt{3}}$ is irrational” is equivalent to saying that the equation ${a^3 + b^3c^3 = 3b^3d^3}$ has no integer solutions (in appropriate form). In general, irrationality often appears as the impossibility of solving certain equations in integers.
+Strictly speaking, arithmetic does not fully cover irrationality, but many results about irrational numbers can be expressed using integer equations. For example, the statement “ ${\sqrt{3}}$ is irrational” is equivalent to saying that the equation ${a^3 + b^3c^3 = 3b^3d^3}$ has no integer solutions (in appropriate form). In general, irrationality often appears as the impossibility of solving certain equations in integers.
 
 For instance:
 
@@ -79,7 +79,7 @@ We can construct many irrational numbers using expansions (decimal or continued 
 
 Examples:
 
-* ${\log 2}$ is irrational
+* ${\log_2}$ is irrational
 * ${e}$ is irrational
 * ${\pi}$ is irrational
 * ${\pi^2}$ is also irrational
