@@ -229,7 +229,31 @@ Define ${\phi(m)}$ as the number of integers less than ${m}$ that are coprime to
 
 If ${m = \prod p^{e}}$, then:
 
-${\phi(m) = m \prod \left(1 - \frac{1}{p}\right)}$
+> ${m}$ is built by multiplying primes raised to powers
+> 
+> **Example**
+> 
+> ${60 = 2^2 \cdot 3^1 \cdot 5^1}$
+
+$\large{\phi(m) = m \prod \left(1 - \frac{1}{p}\right)}$
+
+> Take ${m}$ and multiply it by a factor ${\left(1 - \frac{1}{p}\right)}$ for **each distinct prime ${p}$ that divides ${m}$**
+> 
+> **Example**
+> 
+> Let ${m = 12}$
+> 
+> Prime factorization:
+> 
+> ${12 = 2^2 \cdot 3}$
+> 
+> Distinct primes: ${2, 3}$
+> 
+> So:
+> 
+> ${\phi(12) = 12\left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)}$
+> 
+> ${= 12 \cdot \frac{1}{2} \cdot \frac{2}{3} = 4}$
 
 This function is multiplicative:
 
