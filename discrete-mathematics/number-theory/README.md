@@ -20,16 +20,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### [Irrational Numbers](./IRRATIONAL.md)
 
-### Congruences and Residues
-
-* Highest common divisor and least common multiple
-* Congruences and classes of residues
-* Elementary properties of congruences
-* Linear congruences
-* Euler’s function φ(n)
-* Applications to trigonometrical sums
-* A general principle
-* Construction of the regular polygon of 17 sides
+### [Congruences and Residues](./CONGRUENCES.md)
 
 ### Fermat’s Theorem and Its Consequences
 
