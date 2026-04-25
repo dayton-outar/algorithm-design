@@ -2,6 +2,7 @@
 
  - [NASA: The Power of Ten - Rules for Developing Safety Critical Code](./NASA.CODING.md)
  - [Interception Concept using Decorator Pattern & SOLID](./INTERCEPTION.CONCEPT.md)
+ - 🔖 Design Patterns TODO
 
 ## Clean Architecture vs The Pragmatic Programmer
 

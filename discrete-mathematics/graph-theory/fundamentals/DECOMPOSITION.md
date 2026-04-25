@@ -1,4 +1,4 @@
-# Decomposition and Special Graphs
+# 🔖 Decomposition and Special Graphs
 
 **Definition:**
 A graph is **self-complementary** if it is isomorphic to its complement.

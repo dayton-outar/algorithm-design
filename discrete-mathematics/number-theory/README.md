@@ -20,7 +20,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### [Irrational Numbers](./IRRATIONAL.md)
 
-### [Congruences and Residues](./CONGRUENCES.md)
+### 🔖 [Congruences and Residues](./CONGRUENCES.md)
 
 ### Fermat’s Theorem and Its Consequences
 

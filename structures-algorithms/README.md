@@ -5,9 +5,9 @@
 
 Some fundamental data structures that are used for solving problems includes,
 
-1. Arrays
-2. Linked Lists
-3. Stack
+1. 🔖 Arrays
+2. 🔖 Linked Lists
+3. 🔖 Stack
 4. [Queues](./queues/)
 5. [Dictionaries](./dictionaries/)
 6. [Graphs](./graphs/)
@@ -18,7 +18,7 @@ Some fundamental data structures that are used for solving problems includes,
 1. [Sorting](./sorting/)
 2. [Huffman Coding](./huffman/)
 
-## Graph Traversal
+## 🔖 Graph Traversal
 
 There are 2 main methods of traversing a graph (or a tree, which is a type of graph): _Depth-first_ and _Breadth-first_.[^1]
 

@@ -334,7 +334,7 @@ ${a^{p-1} \equiv 1 \ (\text{mod } p)}$
 > * How many such residues exist
 > * That they form a **closed system under multiplication**
 
-## Trigonometric sums and exponential form
+## 🔖 Trigonometric sums and exponential form
 
 We define:
 
