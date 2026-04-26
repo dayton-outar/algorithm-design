@@ -51,11 +51,11 @@ That’s the real value of graph theory. It doesn’t just help you draw connect
 * [Matrices and Isomorphism](./fundamentals/MATRICES.md)
 * 🔖 [Decomposition and Special Graphs](./fundamentals/DECOMPOSITION.md)
 
-### Paths, Cycles, and Trails
+### [Paths, Cycles, and Trails](./PATHS.md)
 
-* Connection in Graphs
-* Bipartite Graphs
-* Eulerian Circuits
+* [Connection in Graphs](./PATHS.md#connected-graphs)
+* [Bipartite Graphs](./PATHS.md#bipartite-graphs)
+* [Eulerian Circuits](./PATHS.md#eulerian-circuits)
 
 ### Vertex Degrees and Counting
 
