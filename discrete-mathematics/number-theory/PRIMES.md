@@ -26,6 +26,19 @@ Basic properties:
 * If ${b \mid a}$ and ${b \mid c}$, then ${b \mid (a + c)}$
 * If ${b \mid a}$, then ${b \mid ac}$ for any integer ${c}$
 
+Or
+
+* If ${k \mid a}$ and ${k \mid b}$, then ${k \mid (a - q·b)}$ for any integer ${q}$
+
+Remember,
+
+* ${a \mod b = a - q \dot r}$, where ${ r }$ is the remainder and ${ q }$ is some integer greater than or equal to 0.
+
+For example,
+
+* ${ 20 \mod 8 = 20 - 2 \dot 8 }$
+* ${ 9 \mod 6 = 9 - 1 \dot 6 }$
+
 ## Prime and Composite Numbers
 
 A **prime number** is a positive integer ${p > 1}$ with exactly two positive divisors: ${1}$ and ${p}$.
