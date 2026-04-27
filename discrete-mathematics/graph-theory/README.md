@@ -57,7 +57,7 @@ That’s the real value of graph theory. It doesn’t just help you draw connect
 * [Bipartite Graphs](./PATHS.md#bipartite-graphs)
 * [Eulerian Circuits](./PATHS.md#eulerian-circuits)
 
-### Vertex Degrees and Counting
+### [Vertex Degrees and Counting](./VERTEX.md)
 
 * Counting and Bijections
 * Extremal Problems
