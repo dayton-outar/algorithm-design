@@ -36,7 +36,9 @@ You can also describe a cycle by listing vertices, but then you must repeat the 
 
 ---
 
-### Example (from diagram on page 21)
+### Example
+
+![Walk along path](/.attachments/walk.along.path.png)
 
 Following a path from one vertex to another, then continuing along another path, may create a walk that repeats vertices or edges.
 
@@ -145,6 +147,8 @@ This gives two ways to check bipartiteness:
 
 ### Useful construction
 
+![Odd and even distance](/.attachments/odd.even.distance.png)
+
 You can assign vertices to sets based on distance from a starting vertex:
 
 * Even distance → one set
@@ -217,7 +221,7 @@ If every vertex has degree at least 2, any maximal path must form a cycle.
 
 More generally:
 
-* If every vertex has degree at least ( k ), the graph contains a path of length at least ( k ).
+* If every vertex has degree at least ${ k }$, the graph contains a path of length at least ${ k }$.
 
 ---
 
@@ -232,9 +236,9 @@ A connected graph has an Eulerian circuit **if and only if**:
 
 ## Final Result
 
-If a connected graph has exactly ( 2k ) vertices of odd degree, then:
+If a connected graph has exactly ${ 2k }$ vertices of odd degree, then:
 
-* You can partition its edges into ( k ) trails,
+* You can partition its edges into ${ k }$ trails,
 * Each trail starts and ends at odd-degree vertices.
 
 This generalizes the Eulerian idea:
