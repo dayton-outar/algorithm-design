@@ -4,8 +4,8 @@ Lessons can be found in the following,
 
  - [Fundamentals of Data Structures and Algorithms](./structures-algorithms/)
  - [Design Patterns & Philosophies](./patterns-philosophies/)
- - [Codility Lessons and Challenges](./lessons/codility/)
- - [LeetCode Problems and Solutions](./lessons/leetcode/)
+ - [Codility Lessons](./lessons/codility/)
+ - [LeetCode Lessons](./lessons/leetcode/)
 
 ## More Lessons
 
