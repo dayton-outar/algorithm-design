@@ -12,21 +12,13 @@ ${a^{p-1} \equiv 1 \pmod p}$
 
 These two statements are equivalent when ${p \nmid a}$. If ${p \mid a}$, then ${a^p \equiv 0}$, so the first statement becomes immediate.
 
-### Examples of Fermat’s Theorem
-
-For a prime (p):
-
-${a^p \equiv a \pmod p}$
-
-If (p \nmid a), then:
-
-${a^{p-1} \equiv 1 \pmod p}$
+### Examples
 
 #### Example 1: (p=5,\ a=2)
 
 ${2^5=32}$
 
-(32 \div 5) leaves remainder (2), so:
+${ 32 \div 5 }$ leaves remainder ${ 2 }$, so:
 
 ${2^5 \equiv 2 \pmod 5}$
 
@@ -38,7 +30,7 @@ ${2^4=16 \equiv 1 \pmod 5}$
 
 ${3^7=2187}$
 
-Remainder when divided by 7 is 3:
+Remainder when divided by ${ 7 }$ is ${ 3 }$:
 
 ${3^7 \equiv 3 \pmod 7}$
 
