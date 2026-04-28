@@ -61,6 +61,10 @@ This method essentially visits each node level by level instead of going deep in
 
 ![Level-order traversal](/.attachments/level-order-traversal.png)
 
+## Discrete Mathematics
+
+1. [Number Theory](./number-theory/)
+
 ## Videos
 
 1. [Binary Heap | GeeksforGeeks](https://youtu.be/uZj0hetLFHU)

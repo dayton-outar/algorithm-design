@@ -3,7 +3,6 @@
 Lessons can be found in the following,
 
  - [Fundamentals of Data Structures and Algorithms](./structures-algorithms/)
- - [Discrete Mathematics](./discrete-mathematics/)
  - [Design Patterns & Philosophies](./patterns-philosophies/)
  - [Codility Lessons and Challenges](./lessons/codility/)
  - [LeetCode Problems and Solutions](./lessons/leetcode/)
