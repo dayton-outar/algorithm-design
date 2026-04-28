@@ -6,7 +6,7 @@ If ${ p }$ is prime, then:
 
 ${a^p \equiv a \pmod p}$
 
-If ${ p }$ is prime and (p \nmid a), then:
+If ${ p }$ is prime and ${ p \nmid a }$, then:
 
 ${a^{p-1} \equiv 1 \pmod p}$
 
