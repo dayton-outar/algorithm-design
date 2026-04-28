@@ -14,7 +14,7 @@ These two statements are equivalent when ${p \nmid a}$. If ${p \mid a}$, then ${
 
 ### Examples
 
-#### Example 1: (p=5,\ a=2)
+#### Example 1: ${ p=5, a=2 }$
 
 ${2^5=32}$
 
@@ -26,7 +26,7 @@ Also:
 
 ${2^4=16 \equiv 1 \pmod 5}$
 
-#### Example 2: (p=7,\ a=3)
+#### Example 2: ${ p=7, a=3 }$
 
 ${3^7=2187}$
 
