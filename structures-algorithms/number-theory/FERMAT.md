@@ -1,28 +1,117 @@
-## Fermat’s Theorem and Its Consequences
+# Fermat’s Theorem and Its Consequences
 
-### Fermat’s Theorem
+## Fermat’s Theorem
 
-If (p) is prime, then:
+If ${ p }$ is prime, then:
 
 ${a^p \equiv a \pmod p}$
 
-If (p) is prime and (p \nmid a), then:
+If ${ p }$ is prime and (p \nmid a), then:
 
 ${a^{p-1} \equiv 1 \pmod p}$
 
-These two statements are equivalent when (p \nmid a). If (p \mid a), then ${a^p \equiv 0}$, so the first statement becomes immediate. 
+These two statements are equivalent when ${p \nmid a}$. If ${p \mid a}$, then ${a^p \equiv 0}$, so the first statement becomes immediate.
 
-### The Fermat–Euler Theorem
+### Examples of Fermat’s Theorem
 
-If ((a,m)=1), then:
+For a prime (p):
+
+${a^p \equiv a \pmod p}$
+
+If (p \nmid a), then:
+
+${a^{p-1} \equiv 1 \pmod p}$
+
+#### Example 1: (p=5,\ a=2)
+
+${2^5=32}$
+
+(32 \div 5) leaves remainder (2), so:
+
+${2^5 \equiv 2 \pmod 5}$
+
+Also:
+
+${2^4=16 \equiv 1 \pmod 5}$
+
+#### Example 2: (p=7,\ a=3)
+
+${3^7=2187}$
+
+Remainder when divided by 7 is 3:
+
+${3^7 \equiv 3 \pmod 7}$
+
+Also:
+
+${3^6=729 \equiv 1 \pmod 7}$
+
+#### Example 3: Fast Modular Power
+
+Find remainder of:
+
+${11^{100} \mod 13}$
+
+Since 13 is prime:
+
+${11^{12}\equiv1\pmod{13}}$
+
+Now:
+
+${100=12\cdot8+4}$
+
+So:
+
+${11^{100}=(11^{12})^8\cdot11^4}$
+
+${\equiv1^8\cdot11^4\pmod{13}}$
+
+Now:
+
+${11^2=121\equiv4\pmod{13}}$
+
+${11^4\equiv16\equiv3\pmod{13}}$
+
+Answer:
+
+${11^{100}\equiv3\pmod{13}}$
+
+#### Example 4: Testing Divisibility
+
+Show 17 divides ${3^{16}-1}$
+
+Since 17 is prime:
+
+${3^{16}\equiv1\pmod{17}}$
+
+Therefore:
+
+${3^{16}-1\equiv0\pmod{17}}$
+
+So 17 divides it.
+
+### Why It Matters
+
+Fermat’s theorem helps with:
+
+* finding remainders quickly
+* modular arithmetic
+* cryptography (RSA)
+* primality testing
+* simplifying huge powers
+
+
+## The Fermat–Euler Theorem
+
+If ${(a,m)=1}$, then:
 
 ${a^{\phi(m)} \equiv 1 \pmod m}$
 
-Here, (\phi(m)) counts the positive integers not exceeding (m) that are relatively prime to (m). This result fails when ((a,m)>1). 
+Here, ${\phi(m)}$ counts the positive integers not exceeding ${m}$ that are relatively prime to ${m}$. This result fails when ${(a,m) > 1}$. 
 
 ---
 
-## Properties of Binomial Coefficients
+# Properties of Binomial Coefficients
 
 If (m) and (n) are positive integers, then:
 
@@ -36,13 +125,13 @@ ${\binom{-m}{n}=(-1)^n\frac{m(m+1)\cdots(m+n-1)}{n!}}$
 
 is an integer. 
 
-### Product of Consecutive Integers
+## Product of Consecutive Integers
 
 The product of any (n) consecutive positive integers is divisible by (n!). 
 
 ---
 
-## Prime Divisibility of Binomial Coefficients
+# Prime Divisibility of Binomial Coefficients
 
 If (p) is prime, then:
 
@@ -52,7 +141,7 @@ are all divisible by (p).
 
 ---
 
-## Expansion Modulo a Prime
+# Expansion Modulo a Prime
 
 If (p) is prime, then all coefficients in the expansion of:
 
@@ -62,7 +151,7 @@ except the constant term are divisible by (p).
 
 ---
 
-## Freshman’s Dream Congruence
+# Freshman’s Dream Congruence
 
 If (p) is prime, then:
 
@@ -72,7 +161,7 @@ This follows because all mixed terms have coefficients divisible by (p).
 
 ---
 
-## Lifting Powers
+# Lifting Powers
 
 If (\alpha>0) and:
 
@@ -84,7 +173,7 @@ ${m^p \equiv 1 \pmod{p^{\alpha+1}}}$
 
 ---
 
-## Quadratic Residues
+# Quadratic Residues
 
 Let (p) be an odd prime and let (p \nmid a).
 
@@ -98,7 +187,7 @@ If it has no solution, then (a) is a **quadratic non-residue** modulo (p).
 
 ---
 
-## Legendre Symbol
+# Legendre Symbol
 
 For odd prime (p):
 
@@ -116,7 +205,7 @@ ${a \equiv b \pmod p}$
 
 ---
 
-## Wilson’s Theorem
+# Wilson’s Theorem
 
 If (p) is prime, then:
 
@@ -130,7 +219,7 @@ ${m \mid (m-1)!+1}$
 
 ---
 
-## Residue of (-1)
+# Residue of (-1)
 
 For odd prime (p):
 
@@ -143,13 +232,13 @@ So:
 
 ---
 
-## Euler’s Criterion
+# Euler’s Criterion
 
 For odd prime (p):
 
 ${\left(\frac{a}{p}\right)\equiv a^{(p-1)/2} \pmod p}$ 
 
-## Elementary Properties of Quadratic Residues and Non-Residues
+# Elementary Properties of Quadratic Residues and Non-Residues
 
 For an odd prime (p), the numbers:
 
@@ -157,7 +246,7 @@ ${1^2,2^2,3^2,\dots,\left(\frac{p-1}{2}\right)^2}$
 
 are all incongruent modulo (p). Therefore there are exactly (\frac{p-1}{2}) quadratic residues and (\frac{p-1}{2}) quadratic non-residues modulo (p). 
 
-### Products
+## Products
 
 If two numbers are both residues, or both non-residues, their product is a residue.
 
@@ -165,7 +254,7 @@ If one is a residue and the other a non-residue, their product is a non-residue.
 
 ---
 
-## Representation of Certain Primes
+# Representation of Certain Primes
 
 If (p=4k+1) is prime, then there exists an integer (x) such that:
 
@@ -181,7 +270,7 @@ with (0<m<p).
 
 ---
 
-## Order of a Number Modulo (m)
+# Order of a Number Modulo (m)
 
 If ((a,m)=1), define the **order** of (a) modulo (m) as the smallest positive integer (x) such that:
 
@@ -195,7 +284,7 @@ If (p) is prime, then the order of (a) modulo (p) divides (p-1).
 
 ---
 
-## Converse of Fermat’s Theorem
+# Converse of Fermat’s Theorem
 
 The direct converse is false. A composite number (m) may satisfy:
 
@@ -209,7 +298,7 @@ If the congruence holds for every (a) with ((a,m)=1), then (m) is called a **Car
 
 ---
 
-## Divisibility of ${2^{p-1}-1}$ by ${p^2}$
+# Divisibility of ${2^{p-1}-1}$ by ${p^2}$
 
 If (p>2) is prime, usually:
 
@@ -225,7 +314,7 @@ ${2^{p-1}-1 \equiv 0 \pmod{p^2}}$
 
 ---
 
-## Gauss’s Lemma
+# Gauss’s Lemma
 
 Let (p) be an odd prime and (a) not divisible by (p). Consider:
 
@@ -239,7 +328,7 @@ ${\left(\frac{a}{p}\right)=(-1)^\mu}$
 
 ---
 
-## Quadratic Character of 2
+# Quadratic Character of 2
 
 For odd prime (p):
 
@@ -256,7 +345,7 @@ So:
 
 ---
 
-## Quadratic Character of 3
+# Quadratic Character of 3
 
 For odd prime (p>3):
 
@@ -265,7 +354,7 @@ For odd prime (p>3):
 
 ---
 
-## Quadratic Character of 7
+# Quadratic Character of 7
 
 For odd prime (p>7):
 
@@ -274,7 +363,7 @@ For odd prime (p>7):
 
 ---
 
-## Law of Quadratic Reciprocity
+# Law of Quadratic Reciprocity
 
 If (p) and (q) are odd primes, then:
 
@@ -292,7 +381,7 @@ ${\left(\frac{p}{q}\right)=-\left(\frac{q}{p}\right)}$
 
 ---
 
-## Primality Tests from Fermat-Type Results
+# Primality Tests from Fermat-Type Results
 
 If (p>2), (h<p), and (n=hp+1) satisfies:
 
@@ -306,7 +395,7 @@ ${2^{(n-1)/2}\equiv -1 \pmod n}$
 
 ---
 
-## Factors of Mersenne Numbers
+# Factors of Mersenne Numbers
 
 For numbers of the form:
 
