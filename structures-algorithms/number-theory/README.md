@@ -22,23 +22,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### 🔖 [Congruences and Residues](./CONGRUENCES.md)
 
-### Fermat’s Theorem and Its Consequences
-
-* Fermat’s theorem
-* Some properties of binomial coefficients
-* A second proof
-* Proof of earlier theorem
-* Quadratic residues
-* Special cases: Wilson’s theorem
-* Elementary properties of quadratic residues and non-residues
-* The order of a (mod m)
-* The converse of Fermat’s theorem
-* Divisibility of (2^{p-1} - 1) by (p^2)
-* Gauss’s lemma and the quadratic character of 2
-* The law of reciprocity
-* Proof of the law of reciprocity
-* Tests for primality
-* Factors of Mersenne numbers
+### [Fermat’s Theorem and Its Consequences](./FERMAT.md)
 
 ### General Properties of Congruences
 
