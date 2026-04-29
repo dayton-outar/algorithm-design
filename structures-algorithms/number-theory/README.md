@@ -30,7 +30,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### 🔖 [The Representation of Numbers by Decimals](./REPRESENTATION.DECIMALS.md)
 
-### 🔖 Continued Fractions
+### 🔖 [Continued Fractions](./CONTINUED.FRACTIONS.md)
 
 * Finite continued fractions
 * Convergents
@@ -48,7 +48,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Fibonacci and Lucas series
 * Approximation by convergents
 
-### 🔖 Approximation of Irrationals by Rationals
+### 🔖 [Approximation of Irrationals by Rationals](./APPROXIMATION.IRRATIONALS.md)
 
 * Statement of the problem
 * Generalities
