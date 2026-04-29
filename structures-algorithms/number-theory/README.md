@@ -22,50 +22,15 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 
 ### 🔖 [Congruences and Residues](./CONGRUENCES.md)
 
-### [Fermat’s Theorem and Its Consequences](./FERMAT.md)
+### 🔖 [Fermat’s Theorem and Its Consequences](./FERMAT.md)
 
-### General Properties of Congruences
+### 🔖 [General Properties of Congruences](./GENERAL.PROPERTIES.CONGRUENCES.md)
 
-* Roots of congruences
-* Integral polynomials and identical congruences
-* Divisibility of polynomials (mod m)
-* Roots to a prime modulus
-* Some applications
-* Lagrange’s proof of Fermat’s and Wilson’s theorems
-* The residue of ((\frac{1}{2}(p-1))!)
-* A theorem of Wolstenholme
-* The theorem of von Staudt
-* Proof of von Staudt’s theorem
+### 🔖 [Congruences to Composite Moduli](./CONGRUENCES.COMPOSITE.MODULI.md)
 
-### Congruences to Composite Moduli
+### 🔖 [The Representation of Numbers by Decimals](./REPRESENTATION.DECIMALS.md)
 
-* Linear congruences
-* Congruences of higher degree
-* Congruences to a prime-power modulus
-* Examples
-* Bauer’s identical congruence
-* Bauer’s congruence: the case p=2
-* A theorem of Leudesdorf
-* Further consequences
-* Residues of expressions modulo (p^2)
-
-### The Representation of Numbers by Decimals
-
-* The decimal associated with a given number
-* Terminating and recurring decimals
-* Representation in other scales
-* Irrationals defined by decimals
-* Tests for divisibility
-* Decimals with maximum period
-* Bachet’s problem of the weights
-* The game of Nim
-* Integers with missing digits
-* Sets of measure zero
-* Decimals with missing digits
-* Normal numbers
-* Proof that almost all numbers are normal
-
-### Continued Fractions
+### 🔖 Continued Fractions
 
 * Finite continued fractions
 * Convergents
@@ -83,7 +48,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Fibonacci and Lucas series
 * Approximation by convergents
 
-### Approximation of Irrationals by Rationals
+### 🔖 Approximation of Irrationals by Rationals
 
 * Statement of the problem
 * Generalities
@@ -100,7 +65,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Transcendence of e
 * Transcendence of π
 
-### The Fundamental Theorem of Arithmetic in k(i), k(ω), and k(ρ)
+### 🔖 The Fundamental Theorem of Arithmetic in k(i), k(ω), and k(ρ)
 
 * Algebraic numbers and integers
 * Gaussian integers
@@ -112,13 +77,13 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Fundamental theorem in k(i)
 * Integers of k(ρ)
 
-### Some Diophantine Equations
+### 🔖 Some Diophantine Equations
 
 * Fermat’s last theorem
 * Equations of forms (x^2 + y^2 = z^2), etc.
 * Further Diophantine equations
 
-### Quadratic Fields (1)
+### 🔖 Quadratic Fields (1)
 
 * Algebraic fields
 * Algebraic numbers and integers
@@ -129,7 +94,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Complex Euclidean fields
 * Real Euclidean fields
 
-### Quadratic Fields (2)
+### 🔖 Quadratic Fields (2)
 
 * Primes of k(i)
 * Fermat’s theorem in k(i)
@@ -140,7 +105,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Ideals
 * Other fields
 
-### Arithmetical Functions
+### 🔖 Arithmetical Functions
 
 * The function φ(n)
 * Further proof
@@ -153,7 +118,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Function r(n)
 * Proof of formula for r(n)
 
-### Generating Functions of Arithmetical Functions
+### 🔖 Generating Functions of Arithmetical Functions
 
 * Generation via Dirichlet series
 * Zeta function
@@ -166,7 +131,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Generating function of r(n)
 * Other types
 
-### Order of Magnitude of Arithmetical Functions
+### 🔖 Order of Magnitude of Arithmetical Functions
 
 * Order of d(n)
 * Average order
@@ -176,7 +141,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Number of squarefree numbers
 * Order of r(n)
 
-### Partitions
+### 🔖 Partitions
 
 * General problem of additive arithmetic
 * Partitions of numbers
@@ -194,7 +159,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Proofs of key theorems
 * Ramanujan’s continued fraction
 
-### Representation by Two or Four Squares
+### 🔖 Representation by Two or Four Squares
 
 * Waring’s problem
 * Squares
@@ -208,7 +173,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Lemmas and further proofs
 * Representations by squares
 
-### Representation by Cubes and Higher Powers
+### 🔖 Representation by Cubes and Higher Powers
 
 * Biquadrates
 * Cubes
@@ -220,7 +185,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Evaluation of sums
 * Further Diophantine problems
 
-### The Series of Primes (3)
+### 🔖 The Series of Primes (3)
 
 * Functions θ(x) and ψ(x)
 * Their order
@@ -236,7 +201,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Primes in an interval
 * Conjectures on twin primes
 
-### Kronecker’s Theorem
+### 🔖 Kronecker’s Theorem
 
 * One-dimensional theorem
 * Proofs
@@ -247,7 +212,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * Further proofs
 * Uniform distribution
 
-### Geometry of Numbers
+### 🔖 Geometry of Numbers
 
 * Introduction and restatement
 * Applications
@@ -259,7 +224,7 @@ Despite its abstract nature, number theory is both ancient and modern. It carrie
 * More proofs
 * Theorems of Chebotarev and Minkowski
 
-### Elliptic Curves
+### 🔖 Elliptic Curves
 
 * Congruent number problem
 * Addition law
