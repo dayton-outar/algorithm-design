@@ -23,6 +23,11 @@ Some fundamental data structures that are used for solving problems includes,
 
 1. [Number Theory](./number-theory/)
 
+## Further Reading
+
+1. [GeeksforGeeks: Data Structures & Algorithms Tutorials](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/)
+2. [DSA Visualizer - Interactive Data Structures & Algorithms](https://visualizedsa.com/)
+
 ## Videos
 
 1. [Binary Heap | GeeksforGeeks](https://youtu.be/uZj0hetLFHU)
