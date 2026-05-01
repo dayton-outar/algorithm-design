@@ -1,4 +1,4 @@
-# 918. Maximum Sum Circular Subarray (🟡 Moderate)
+# 918. Maximum Sum Circular Subarray 🟡
 
 ## Problem
 

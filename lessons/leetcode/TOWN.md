@@ -1,4 +1,4 @@
-# 997. Find the Town Judge (🟢 Easy)
+# 997. Find the Town Judge 🟢
 
 ## Problem
 

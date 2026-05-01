@@ -1,4 +1,4 @@
-# 917. Reverse Only Letters (🟢 Easy)
+# 917. Reverse Only Letters 🟢
 
 ## Problem
 

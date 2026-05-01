@@ -1,4 +1,4 @@
-# 899. Orderly Queue (🔴 Hard)
+# 899. Orderly Queue 🔴
 
 ## Problem
 
