@@ -1,6 +1,8 @@
-# LeetCode JavaScript Problems
+# LeetCode Problems
 
-This folder contains JavaScript solutions and companion notes for selected LeetCode problems. Each Markdown file summarizes the prompt, explains the strategy used in the JavaScript implementation, and records the expected complexity.
+LeetCode is one of the most widely used platforms for practicing data structures, algorithms, and technical interview problem solving. Its problem set has earned a reputation for covering the patterns that show up often in coding interviews, from string manipulation and graph traversal to dynamic programming and careful edge-case reasoning.
+
+The author's intent here is to keep notes and write down observations about each problem and its solution. These entries collect the problem, approach, algorithm, and complexity notes beside the JavaScript implementations in this folder.
 
 ## Table of Contents
 
