@@ -16,14 +16,16 @@ Patterns for controlling object creation.
 
 ### Observations
 
-The **Factory Method** is very useful in situations where parameters can be used to create a certain type of object. ...
+The **Factory Method** is very useful in situations where parameters can be used to create a certain type of object. So, whenever different implementations of a class is done and is stored, the behaviour is embedded in it when the interface associated is invoked. The **Factory Method** becomes relevant when choosing the right class to use before storing it. This method becomes relevant when objects are created. (Am I making any sense here?)
+
+
 
 ## 2. Structural Patterns
 
 Patterns for composing classes and objects cleanly.
 
-6. **Adapter** — Make incompatible interfaces work together.
-7. **Bridge** — Separate abstraction from implementation so both can evolve independently.
+6. **Adapter**. ★★★★☆ — Make incompatible interfaces work together.
+7. **Bridge**. ★★★★☆ — Separate abstraction from implementation so both can evolve independently.
 8. **Composite** — Treat individual objects and object groups the same way.
 9. **Decorator** — Add behavior by wrapping an object.
 10. **Facade** — Provide a simple interface over a complex subsystem.
@@ -32,7 +34,10 @@ Patterns for composing classes and objects cleanly.
 
 ### Observations
 
-The **Adapter** structural pattern is used a lot for wrappers for interfaces that integrate two systems with different data structures. ...
+The **Adapter** structural pattern is used a lot for wrappers for interfaces that integrate two systems with different data structures. I give it 4 stars.
+
+I find that the **Bridge** pattern makes use of dependency inversion and open-closed patterns. I think it is very useful when alternate implementations of different tools that are managed by different teams has to be considered. Most structural patterns are useful for divisional of labour to give latitude for separation of concerns. I give it a 4 stars because I have seen where it is very useful especially when using frameworks like Symfony. Symfony enforces SOLID principles.
+
 
 ## 3. Behavioral Patterns
 
