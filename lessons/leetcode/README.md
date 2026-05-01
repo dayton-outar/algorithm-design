@@ -8,7 +8,7 @@ The author's intent here is to keep notes and write down observations about each
 
 | Problem | Topic | Summary |
 | --- | --- | --- |
-| [899. Orderly Queue](ORDER-QUEUE.md) | Strings | Find the lexicographically smallest string possible after repeatedly moving one of the first `k` characters to the end. |
-| [997. Find the Town Judge](TOWN.md) | Graph / Trust Counting | Identify the person trusted by everyone else who trusts nobody. |
-| [917. Reverse Only Letters](REVERSE-STRING.md) | Strings | Reverse only alphabetic characters while leaving symbols and punctuation in place. |
-| [918. Maximum Sum Circular Subarray](MAX-SUM-CIRCULAR.md) | Dynamic Programming | Use Kadane's algorithm to compare the best normal subarray with the best circular subarray. |
+| [899. Orderly Queue](ORDER-QUEUE.md) <span style="background:#ef4444;color:white;padding:2px 8px;border-radius:999px;">Hard</span> | Strings | Find the lexicographically smallest string possible after repeatedly moving one of the first `k` characters to the end. |
+| [997. Find the Town Judge](TOWN.md) <span style="background:#22c55e;color:white;padding:2px 8px;border-radius:999px;">Easy</span> | Graph / Trust Counting | Identify the person trusted by everyone else who trusts nobody. |
+| [917. Reverse Only Letters](REVERSE-STRING.md) <span style="background:#22c55e;color:white;padding:2px 8px;border-radius:999px;">Easy</span> | Strings | Reverse only alphabetic characters while leaving symbols and punctuation in place. |
+| [918. Maximum Sum Circular Subarray](MAX-SUM-CIRCULAR.md) <span style="background:#eab308;color:black;padding:2px 8px;border-radius:999px;">Moderate</span> | Dynamic Programming | Use Kadane's algorithm to compare the best normal subarray with the best circular subarray. |

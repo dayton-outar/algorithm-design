@@ -1,4 +1,4 @@
-# 918. Maximum Sum Circular Subarray
+# 918. Maximum Sum Circular Subarray <span style="background:#eab308;color:black;padding:2px 8px;border-radius:999px;">Moderate</span>
 
 ## Problem
 
