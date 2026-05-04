@@ -31,7 +31,7 @@ Counting the number of negative integers can be done in two ways. The ﬁrst met
 
 ## 4.1. Exercise
 
-**Problem:** You are given an integer $m$ $(1 \leq m \leq 1,000,000)$ and two non-empty, zero-indexed arrays $A$ and $B$ of $n$ integers, $a_0, a_1 ,\ldots , a_{n−1}$ and $b_0, b_1, \ldots, b_{n−1}$ respectively $(0 \leq a_i, b_i \leq m)$.
+**Problem:** 🟡 You are given an integer $m$ $(1 \leq m \leq 1,000,000)$ and two non-empty, zero-indexed arrays $A$ and $B$ of $n$ integers, $a_0, a_1 ,\ldots , a_{n−1}$ and $b_0, b_1, \ldots, b_{n−1}$ respectively $(0 \leq a_i, b_i \leq m)$.
 
 The goal is to check whether there is a swap operation which can be performed on these arrays in such a way that the sum of elements in array A equals the sum of elements in array B after the swap. By swap operation we mean picking one element from array A and one element from array B and exchanging them.
 
