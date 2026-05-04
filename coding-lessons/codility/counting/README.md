@@ -214,19 +214,19 @@ So no valid swap exists.
 Now you’re searching for:
 
 ```
-y = x + d
+y - d = x
 ```
 
 #### 5. Where the “array as hash table” comes in
 
 To check fast:
 
-* Put all values of B into a boolean array (or set)
-* Then for each `x` in A:
+* Put all frequency of values of A into an array (or set), using index as key for the values
+* Then for each `y` in B:
 
-  * check if `x + d` exists in B
+  * check if `y - d` exists in A
 
-That turns a slow O(n²) into O(n)
+That turns a slow ${O(n^2)}$ into ${O(n)}$
 
 #### 6. How people come up with this
 
