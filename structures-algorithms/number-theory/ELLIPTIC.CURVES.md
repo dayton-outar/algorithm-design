@@ -16,10 +16,10 @@ It’s not obvious at first—but the bridge is a clever change of variables tha
 
 You have a right triangle with rational sides:
 
-* (a^2 + b^2 = c^2)
-* (\frac{ab}{2} = n)
+* $(a^2 + b^2 = c^2)$
+* $(\frac{ab}{2} = n)$
 
-So (ab = 2n).
+So $(ab = 2n)$.
 
 ---
 
@@ -27,9 +27,9 @@ So (ab = 2n).
 
 Instead of working directly with (a, b, c), define new variables:
 
-[
+$\large{
 x = \frac{c^2}{4}, \quad y = \frac{c(a - b)}{8}
-]
+}$
 
 This looks random—but it’s designed to eliminate (a, b).
 
@@ -39,12 +39,14 @@ This looks random—but it’s designed to eliminate (a, b).
 
 Using:
 
-* (a^2 + b^2 = c^2)
-* (ab = 2n)
+* $(a^2 + b^2 = c^2)$
+* $(ab = 2n)$
 
 After algebra (skipping the grind), everything collapses into:
 
+$\large{
 y^2 = x^3 - n^2 x
+}$
 
 ---
 
@@ -52,9 +54,9 @@ y^2 = x^3 - n^2 x
 
 This is a standard elliptic curve of the form:
 
-[
+$\large{
 y^2 = x^3 + ax + b
-]
+}$
 
 So:
 
@@ -67,7 +69,7 @@ So:
 
 Now the problem becomes:
 
-> Does the curve (y^2 = x^3 - n^2 x) have a **nontrivial rational point**?
+> Does the curve $(y^2 = x^3 - n^2 x)$ have a **nontrivial rational point**?
 
 * If **yes** → (n) is a congruent number
 * If **no** → it isn’t
