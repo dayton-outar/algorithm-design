@@ -25,13 +25,13 @@ So $(ab = 2n)$.
 
 #### 2) Re-parameterize the triangle
 
-Instead of working directly with (a, b, c), define new variables:
+Instead of working directly with $(a, b, c)$, define new variables:
 
 $\large{
 x = \frac{c^2}{4}, \quad y = \frac{c(a - b)}{8}
 }$
 
-This looks random—but it’s designed to eliminate (a, b).
+This looks random—but it’s designed to eliminate $(a, b)$.
 
 ---
 
@@ -60,8 +60,8 @@ y^2 = x^3 + ax + b
 
 So:
 
-* Every rational right triangle with area (n) gives a **rational point** ((x,y)) on this curve
-* And vice versa (you can go back and recover (a,b,c))
+* Every rational right triangle with area $(n)$ gives a **rational point** $((x,y))$ on this curve
+* And vice versa (you can go back and recover $(a,b,c)$)
 
 ---
 
