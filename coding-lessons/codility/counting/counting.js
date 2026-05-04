@@ -41,6 +41,9 @@ const fastSolution = (A, B, m) => {
 
     if (d % 2 == 1) return false; // Why odd number difference fails requirement?
 
+    // * `4.5 % 2 = 0.5` → not `1`, so it **passes your check**
+    // * `6.2 % 2 = 0.2` → also **passes**
+    // If `d` could be non-integer, forces it back to an integer.
     d = Math.floor( d / 2 );
 
     let count = counting(A, m);
