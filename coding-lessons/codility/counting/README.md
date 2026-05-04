@@ -102,7 +102,7 @@ In the function `fastSolution`, it was not clearly explained the reason for retu
 if (d % 2 == 1) return false;
 ```
 
-Eventually, after running a few cases you begin to understand that only a difference that is an even number can be split and swapped. For example, if the sum difference between two (2) sequences is 2, the difference can be split in two (2) and shared across both seqences. Let's say one sequence has $[3, 2, 2]$ and another sequence has $[3, 1, 1]$, after splitting the difference any of the 2's from first sequence can be swapped with any of the 1's from the second sequence to get both sequences to have equal sum: $[3, 2, 1]$, $[3, 2, 1]$.
+Eventually, after running a few cases you begin to understand that only a difference that is an even number can be split and swapped. For example, if the sum difference between two sequences is ${2}$, the difference can be split in two and shared across both seqences. Let's say one sequence has $[3, 2, 2]$ and another sequence has $[3, 1, 1]$, after splitting the difference any of the ${2}$'s from first sequence can be swapped with any of the ${1}$'s from the second sequence to get both sequences to have equal sum: $[3, 2, 1]$, $[3, 2, 1]$.
 
 So, the line of code below splits the difference of the sum between the two sequences,
 
@@ -120,7 +120,7 @@ let value = B[i] - d;
 
 Now, that we have a value that _restores balance_ we can apply a few conditions to identify a number that can be swapped. Here are the conditions,
 
-1. The value needs to be within the range between 0 and $m$. So, this explains `(0 < value) && (value <= m)`
+1. The value needs to be within the range between ${0}$ and ${m}$. So, this explains `(0 < value) && (value <= m)`
 2. Does this value exist in the first sequence? So, we use `(count[value] > 0)`
 
 Once both conditions are met, we now there exists a number in the first sequence that can be swapped into the second sequence to make both sequences have a sum that equal to each other.
