@@ -128,6 +128,128 @@ Now, that we have a value that _restores balance_ we can apply a few conditions 
 
 Once both conditions are met, we now there exists a number in the first sequence that can be swapped into the second sequence to make both sequences have a sum that equal to each other.
 
+### The Magic
+
+The magic is pattern recognition + a small algebra step most people skip.
+
+#### 1. Start from the goal (not the code)
+
+You’re trying to **swap one element from A with one from B** so that:
+
+* new sum of A = new sum of B
+
+Let:
+
+* `x` = element from A
+* `y` = element from B
+
+After swap:
+
+* `sumA - x + y = sumB - y + x`
+
+#### 2. Do the algebra (this is the “magic”)
+
+Rearrange:
+
+```
+sumA - x + y = sumB - y + x
+```
+
+Move terms:
+
+```
+sumA - sumB = 2x - 2y
+```
+
+Divide by 2:
+
+```
+(sumA - sumB)/2 = x - y
+```
+
+Flip sign if needed:
+
+```
+y = x + (sumB - sumA)/2
+```
+
+That’s your **key insight**.
+
+#### 3. Why this leads to the code
+
+Let:
+
+```
+d = sumB - sumA
+```
+
+Then:
+
+```
+y = x + d/2
+```
+
+So for every `x` in A, you just need to check:
+
+> “Does B contain `x + d/2`?”
+
+#### 4. Why the checks matter
+
+##### ✔ `Math.abs(sumB - sumA)`
+
+You only care about the **difference**, not direction.
+
+##### ✔ `d % 2 == 1`
+
+If `d` is odd:
+
+```
+d/2 is not an integer → impossible
+```
+
+So no valid swap exists.
+
+##### ✔ `d = d / 2`
+
+Now you’re searching for:
+
+```
+y = x + d
+```
+
+#### 5. Where the “array as hash table” comes in
+
+To check fast:
+
+* Put all values of B into a boolean array (or set)
+* Then for each `x` in A:
+
+  * check if `x + d` exists in B
+
+That turns a slow O(n²) into O(n)
+
+#### 6. How people come up with this
+
+Not by guessing. It’s a repeatable process:
+
+1. **Write the condition mathematically**
+2. **Solve for the unknown**
+3. **Reduce to a lookup problem**
+
+You’re basically transforming:
+
+> “Try all swaps”
+> → into
+> “Find a number with a specific relationship”
+
+#### Bottom line
+
+The real skill isn’t memorizing tricks. It’s this habit:
+
+> Translate the problem into an equation, then simplify it until it becomes a lookup.
+
+That’s the move you’re starting to notice. Keep pushing there—that’s where you level up fast.
+
 ## References
 
 1. [Codility Training Media - Counting Elements](https://codility.com/media/train/2-CountingElements.pdf)
