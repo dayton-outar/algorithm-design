@@ -60,8 +60,8 @@ y^2 = x^3 + ax + b
 
 So:
 
-* Every rational right triangle with area $(n)$ gives a **rational point** $((x,y))$ on this curve
-* And vice versa (you can go back and recover $(a,b,c)$)
+* Every rational right triangle with area $(n)$ gives a **rational point** ${(x,y)}$ on this curve
+* And vice versa (you can go back and recover $(a,b,c)$ )
 
 ---
 
