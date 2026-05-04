@@ -8,24 +8,24 @@ Take note of the author/contributor's rating.
 
 Patterns for controlling object creation.
 
-1. **Factory Method**. ★★★★★ — Create objects through a common interface while letting subclasses decide the exact class.
-2. **Abstract Factory**. ★★★☆☆ — Create families of related objects without tying code to concrete classes.
-3. **Builder**. ★★★★★ — Build complex objects step by step.
-4. **Prototype**. ★★★☆☆ — Clone existing objects instead of creating new ones from scratch.
-5. **Singleton**. ★★★★☆ — Ensure only one instance of a class exists globally.
+1. **[Factory Method](https://refactoring.guru/design-patterns/factory-method/typescript/example)**. ★★★★★ — Create objects through a common interface while letting subclasses decide the exact class.
+2. **[Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory/typescript/example)**. ★★★☆☆ — Create families of related objects without tying code to concrete classes.
+3. **[Builder](https://refactoring.guru/design-patterns/builder/typescript/example)**. ★★★★★ — Build complex objects step by step.
+4. **[Prototype](https://refactoring.guru/design-patterns/prototype/typescript/example)**. ★★★☆☆ — Clone existing objects instead of creating new ones from scratch.
+5. **[Singleton](https://refactoring.guru/design-patterns/singleton/typescript/example)**. ★★★★☆ — Ensure only one instance of a class exists globally.
 
 ### Observations
 
 The **Factory Method** is very useful in situations where parameters can be used to create a certain type of object. So, whenever different implementations of a class is done and is stored, the behaviour is embedded in it when the interface associated is invoked. The **Factory Method** becomes relevant when choosing the right class to use before storing it. This method becomes relevant when objects are created. (Am I making any sense here?)
 
-
+...
 
 ## 2. Structural Patterns
 
 Patterns for composing classes and objects cleanly.
 
-6. **Adapter**. ★★★★☆ — Make incompatible interfaces work together.
-7. **Bridge**. ★★★★☆ — Separate abstraction from implementation so both can evolve independently.
+6. **[Adapter](https://refactoring.guru/design-patterns/adapter/typescript/example)**. ★★★★☆ — Make incompatible interfaces work together.
+7. **[Bridge](https://refactoring.guru/design-patterns/bridge/typescript/example)**. ★★★★☆ — Separate abstraction from implementation so both can evolve independently.
 8. **Composite** — Treat individual objects and object groups the same way.
 9. **Decorator** — Add behavior by wrapping an object.
 10. **Facade** — Provide a simple interface over a complex subsystem.
@@ -36,7 +36,9 @@ Patterns for composing classes and objects cleanly.
 
 The **Adapter** structural pattern is used a lot for wrappers for interfaces that integrate two systems with different data structures. I give it 4 stars.
 
-I find that the **Bridge** pattern makes use of dependency inversion and open-closed patterns. I think it is very useful when alternate implementations of different tools that are managed by different teams has to be considered. Most structural patterns are useful for divisional of labour to give latitude for separation of concerns. I give it a 4 stars because I have seen where it is very useful especially when using frameworks like Symfony. Symfony enforces SOLID principles.
+I find that the **Bridge** pattern makes use of dependency inversion and open-closed patterns. I think it is very useful when alternate implementations of different tools that are managed by different teams has to be considered. Most structural patterns are useful for divisional of labour to give latitude for separation of concerns. I give it a 4 stars because I have seen where it is very useful especially when using frameworks like Symfony. Symfony enforces SOLID principles. So, this pattern definitely helps OOP languages to achieve separation of concerns.
+
+...
 
 
 ## 3. Behavioral Patterns
