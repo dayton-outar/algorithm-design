@@ -58,7 +58,7 @@ An addendum based on a problem done on Codility as part of interview,
 
 ## Most Challenging Problems
 
-1. [Min Avg Two Slice](./prefix-sums#minimum-average-of-two-slices) &#x2713;
+1. [Min Avg Two Slice](./prefix-sums#minimum-average-of-two-slices) &#x2713; 🟡
 2. [Genomic Range Query](./prefix-sums/GENOMIC.md) &#x2713;
 3. [Mushroom Picker](./prefix-sums#51-exercise) &#x2713; 🟡
 4. [Triangle](./sorting/TRIANGLE.md) &#x2713;
