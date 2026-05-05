@@ -54,7 +54,7 @@ For example, consider array A such that:
 
 The mushroom picker starts at spot $k = 4$ and should perform $m = 6$ moves. She might move to spots 3, 2, 3, 4, 5, 6 and thereby collect 1 + 5 + 7 + 3 + 9 = 25 mushrooms. This is the maximal number of mushrooms she can collect.
 
-**Solution $O(m^2)$:** Note that the best strategy is to move in one direction optionally followed by some moves in the opposite direction. In other words, the mushroom picker should not change direction more than once. With this observation we can ﬁnd the simplest solution. Make the ﬁrst $p = 0, 1, 2, \\dots, m $moves in one direction, then the next $m − p$ moves in the opposite direction. This is just a simple simulation of the moves of the mushroom picker which requires $O(m^2)$ time.
+**Solution $O(m^2)$:** Note that the best strategy is to move in one direction optionally followed by some moves in the opposite direction. In other words, the mushroom picker should not change direction more than once. With this observation we can ﬁnd the simplest solution. Make the ﬁrst ${ p = 0, 1, 2, \\dots, m }$ moves in one direction, then the next $m − p$ moves in the opposite direction. This is just a simple simulation of the moves of the mushroom picker which requires $O(m^2)$ time.
 
 **Solution $O(n + m)$:** A better approach is to use preﬁx sums. If we make $p$ moves in one direction, we can calculate the maximal opposite location of the mushroom picker. The mushroom picker collects all mushrooms between these extremes. We can calculate the total number of collected mushrooms in constant time by using preﬁx sums.
 
