@@ -80,6 +80,7 @@ const mushrooms = (A, k, m) => {
     return result;
 }
 
+// prefixSums: [ 0,  2,  5, 12, 17, 18, 21, 30 ]
 mushrooms( [2, 3, 7, 5, 1, 3, 9], 4, 6); // 25
 ```
 
