@@ -24,8 +24,6 @@ I like the **Builder** design pattern because it provides a structured way to co
 
 The **Prototype** design pattern provides a way to create new objects by copying an existing instance, rather than constructing them from scratch. This is useful when object creation is expensive or when many similar objects with slight variations are needed. By cloning a prototype, you can efficiently produce new instances while preserving the structure and behavior of the original, allowing for flexible and performant object creation. This design pattern is also not very urgent or practical to use. So, I give it 3 out of 5 stars.
 
-You’re on the right track, but the reasoning needs tightening. A **Singleton** isn’t mainly about “utility functions”—it’s about **controlling instance count** and **centralizing access**.
-
 The **Singleton** pattern ensures that a class has only one instance and provides a global point of access to it. It is often used for shared services such as configuration managers, logging systems, or connection pools. In some cases, it maintains a single shared state that is accessed and updated by multiple parts of the application. This is useful when consistency is required and creating multiple instances would lead to conflicts, duplication, or unnecessary resource usage.
 
 
