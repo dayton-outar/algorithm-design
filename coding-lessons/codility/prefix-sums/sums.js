@@ -26,7 +26,7 @@ const mushrooms = (A, k, m) => { // k = initial spot, m = number of moves
         let leftPos = k - i;
         let rightPos = Math.min( n - 1, Math.max( k, ( (k + m) - 2 * i) ) );
         result = Math.max( result, countTotal( sums, leftPos, rightPos ) );
-        console.log(`i: ${i}. calc ... ${((k + m) - 2 * i)}`);
+        console.log(`i: ${i}. calc ... ${((k + m) - 2 * i)} ... Going left`);
         console.log( leftPos, rightPos, `---> ${result}` );
     }
 
@@ -34,7 +34,7 @@ const mushrooms = (A, k, m) => { // k = initial spot, m = number of moves
         let rightPos = k + i;
         let leftPos = Math.max( 0, Math.min( k, ( k - (m - 2 * i ) ) ) );
         result = Math.max( result, countTotal( sums, leftPos, rightPos ) );
-        console.log(`i: ${i}. calc ... ${(k - (m - 2 * i) )}`);
+        console.log(`i: ${i}. calc ... ${(k - (m - 2 * i) )} ... Going right`);
         console.log( leftPos, rightPos, `---> ${result}` );
     }
 
