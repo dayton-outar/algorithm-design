@@ -22,8 +22,6 @@ const mushrooms = (A, k, m) => { // k = initial spot, m = number of moves
     let result = 0;
     const sums = prefixSums(A);
 
-    console.log(`set. i == ${(Math.min(m , k) + 1)}`);
-
     for ( let i = 0; i < (Math.min(m , k) + 1); i++ ) {
         let leftPos = k - i;
         let rightPos = Math.min( n - 1, Math.max( k, ( (k + m) - 2 * i) ) );
@@ -32,7 +30,7 @@ const mushrooms = (A, k, m) => { // k = initial spot, m = number of moves
         console.log( leftPos, rightPos, `---> ${result}` );
     }
 
-    console.log(`reset. i == ${Math.min( m + 1, n - k )} ... ${n} - ${k}`);
+    console.log(`reset. upper bound == ${Math.min( m + 1, n - k )} ... ${n} - ${k}`);
 
     for ( let i = 0; i < Math.min( m + 1, n - k ); i++ ) {
         let rightPos = k + i;

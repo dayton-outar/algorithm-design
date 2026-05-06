@@ -89,17 +89,206 @@ The total time complexity of such a solution is $O(n + m)$.
 
 ## Observations
 
-In the `mushrooms` function, there are two (2) loops. Both of which are getting the maximum sum of a slice of the array.
+In the `mushrooms` function, there are two loops. Each loop evaluates a possible range of positions and computes the **maximum sum of mushrooms collected over a contiguous segment**.
 
-In the loops, the idea is to calculate the right position and the left position to get the sum between those positions. The formulas to derive the positions are most interesting. For the first loop, the minimum number between the length of the array and the maximum of `k` and `(k + m) - 2 * i` is derived for the `rightPos`. The second loop uses an inverted approach to arrive at the left position and includes the formula `k - (m - 2 * i)`. Why the need for these formulas? Why do they work?
+Importantly, the loops do **not** sum directly over the original array `A`. Instead, they use the **prefix sum array** produced by `prefixSums(A)`. This allows the function to compute the total mushrooms between any two positions (`leftPos` and `rightPos`) in constant time using:
 
-Let's begin analyzing the `mushroom` function by starting with the upper bound for both loops. For the first loop, the upper bound is calculated by getting the minimum value between, `m` (moves) and `k` (initial spot) and adding it to 1. Since the aim of the loop is to either iterate `m` times or `k` times, 1 is added to fulfill this requirement due to the loop condition, `i < [upper bound]` (we could avoid adding 1 by using `i <= [upper bound` instead).
+```js
+countTotal(sums, leftPos, rightPos)
+```
 
-So, as stated in the solution approach, _we make moves in one direction [to] calculate the maximal opposite location of the mushroom picker_. So, the use of the `Math.min` for the upper bound is to maintain calculation within bounds of the array provided, that is the number of mushrooms at the various locations (or spots). Take for example, the array `[2, 3, 7, 5, 1, 3, 9]`, which is illustrated in the diagram above. If we started at position 4 (i.e. `k` is 4), and we have 6 moves (i.e. `m` is 6), if we started moving to the left (i.e. from position 4 to position 0), we only have 4 moves limited by virtue of the position and the array. Any more moves beyond 4 to the left would put the program out of bounds (we would have to find -1 and then -2 position). On the contrary if `m` was less than `k`, we could move within bounds and it would be better to use `m` to operate within the requirements of appropriately addressing the problem.
+This is what makes the solution efficient.
 
-When the computer moves into the body of the loops within `mushroom`, it does a simple calculation to arrive at the left-most position, `leftPos`, when moving to the left and a similar simple calculation to arrive at the right-most position, `rightPos` when moving to the left. It is just simply decrementing from the initial position to go as far left as possible and then incrementing to go as far right as possible. That's not hard to grasp.
+---
 
-In the first loop, when moving to the left, the right-most position is calculate from the minimum between `n - 1` (the upper bound index of the array) and `Math.max( k, ( (k + m) - 2 * i ) )` (maximum between the initial spot, `k`, and `(k + m) - 2 * i`). So, `(k + m)` for initial spot of 4 and allowed moves of 6 will always be 10. With this case, each time the loop iterates, it subtracts `2 * i`. Given that the first loop will iterate either `k` or `m` times, `2 * i` can end up being either `2 * k` or `2 * m`. So, based on the way the upper bound was deduced, the formula `(k + m) - 2 * i` could eventually arrive at `(k + m) - 2 * k` or `(k + m) - 2 * m` depending on whether `k` or `m` is the lesser value. To put this another way, let's say that `k` is the lesser value the formula could also be seen as `(k + m) - (k + k)` (or `m - k`) and the upper bound value will bring out the difference between `m` and `k` in this formula. This comes down to managing how far the right position can be set.
+The main task in both loops is to determine valid boundaries:
+
+* `leftPos` → how far left the picker reaches
+* `rightPos` → how far right the picker reaches
+
+Once those are known, the prefix sum array gives the total instantly.
+
+The interesting part is how those boundaries are derived.
+
+---
+
+Let’s start with the first loop.
+
+```js
+for (let i = 0; i < Math.min(m, k) + 1; i++)
+```
+
+Here, `i` represents how many steps the picker takes **to the left first**.
+
+* She cannot move left more than `k` steps (index `0` is the boundary).
+* She cannot exceed `m` total moves.
+
+So the maximum valid left movement is:
+
+```js
+Math.min(m, k)
+```
+
+We add `+1` because `i = 0` is also a valid case (no movement to the left).
+
+This ensures all valid leftward explorations are considered without going out of bounds.
+
+For example, with `[2, 3, 7, 5, 1, 3, 9]`, `k = 4`, `m = 6`:
+
+* Moving left from index 4, the furthest reachable index is 0 (4 steps).
+* Even though 6 moves are available, the array boundary limits movement.
+* So `k` becomes the limiting factor, not `m`.
+
+---
+
+Inside the loop, we compute:
+
+```js
+leftPos = k - i;
+```
+
+This simply moves left from the starting point.
+
+The key part is computing `rightPos`:
+
+```js
+rightPos = Math.min(n - 1, Math.max(k, (k + m) - 2 * i));
+```
+
+---
+
+The expression:
+
+```js
+(k + m) - 2 * i
+```
+
+comes from how movement cost works.
+
+If the picker moves left `i` steps, she spends:
+
+```
+i moves
+```
+
+To then move right, she must first return to `k`, which costs another:
+
+```
+i moves
+```
+
+So going left and coming back costs:
+
+```
+2 * i
+```
+
+That leaves:
+
+```js
+m - 2 * i
+```
+
+moves to go right.
+
+So the furthest right position she can reach is:
+
+```js
+k + (m - 2 * i)
+```
+
+which simplifies to:
+
+```js
+(k + m) - 2 * i
+```
+
+---
+
+The surrounding bounds ensure validity:
+
+* `Math.max(k, ...)` prevents crossing back left of the starting point
+* `Math.min(n - 1, ...)` prevents exceeding the array length
+
+So `rightPos` effectively answers:
+
+> “After going left `i` steps and paying the cost to return, how far right can I still go within the remaining moves?”
+
+---
+
+The second loop mirrors this logic.
+
+```js
+for (let i = 0; i < Math.min(m + 1, n - k); i++)
+```
+
+Here, `i` represents how many steps the picker takes **to the right first**.
+
+* She cannot exceed `m` moves → `m + 1` possibilities including 0
+* She cannot go beyond the array → `n - k` positions
+
+---
+
+Inside the loop:
+
+```js
+rightPos = k + i;
+```
+
+And the left boundary is computed as:
+
+```js
+leftPos = Math.max(0, Math.min(k, k - (m - 2 * i)));
+```
+
+---
+
+The expression:
+
+```js
+k - (m - 2 * i)
+```
+
+follows the same reasoning:
+
+* Moving right `i` steps costs `i`
+* Returning to `k` costs another `i`
+* Total cost: `2 * i`
+
+Remaining moves:
+
+```js
+m - 2 * i
+```
+
+Use those to go left:
+
+```js
+k - (m - 2 * i)
+```
+
+Then clamp within bounds:
+
+* `Math.min(k, ...)` → don’t go right of start
+* `Math.max(0, ...)` → don’t go below index 0
+
+---
+
+## Final intuition
+
+Both loops follow the same pattern:
+
+> Go in one direction first (`i` steps), pay the cost to return (`2 * i`), then use the remaining moves to extend in the opposite direction.
+
+That’s why the key term is always:
+
+```js
+m - 2 * i
+```
+
+And once the range `[leftPos, rightPos]` is defined, the prefix sum array lets us compute the total mushrooms in constant time—making the entire solution efficient.
+
+---
 
 Let's step through the case of passing an array of `[2, 3, 7, 5, 1, 3, 9]`, an initial position of `4` and allowed moves of `6`. While stepping through the focus will be on watching how the line of code below evaluates the right-most position.
 
