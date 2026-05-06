@@ -212,7 +212,7 @@ which simplifies to:
 
 For example (as shown in the table under [Stepping Through](#stepping-through)), assuming starting position (`k`) is 4 and only 6 moves (`m`) are allowed,
 
-* If the picker moves to the left once (to index 3), she has to return to index 4 and that takes up 2 moves, only leaving 4 left. She can only change direction once. So, she continues 4 moves to the right, placing her at index 8 (which is out of bounds). Hence, the need for `(k + m) - 2 * i`, which for this case works to ${(6 + 4) - (2 * 1)}$.
+* If the picker moves to the left once (to index 3), she has to return to index 4 and that takes up 2 moves, only leaving 4 left. She can only change direction once. So, she continues 4 moves to the right, placing her at index 8 (which is out of bounds). Hence, the need for `(k + m) - 2 * i`, which for this case works to ${(6 + 4) - (2 \times 1)}$.
 
 ---
 
