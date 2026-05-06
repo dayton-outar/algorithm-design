@@ -311,7 +311,7 @@ let rightPos = Math.min( n - 1, Math.max( k, ( (k + m) - 2 * i ) ) );
 
 Evaluations of `rightPos` in the first loop is shown in the table below. Please note that the length, `n` of `[2, 3, 7, 5, 1, 3, 9]` is 7. `k` will remain 4 throughout the function as well as `m` (which is 6).
 
-| `rightPos` | `i` | `n - 1` | `k` | `m` | `(k + m) - 2 * i` | Note                                                            |
+| `rightPos` | `i` | `n - 1` | `k` | `m` | `k + (m - 2 * i)` | Note                                                            |
 |-----------:|----:|--------:|----:|----:|------------------:|:----------------------------------------------------------------|
 | 6          |    0|    **6**|    4|    6|                 10| `Math.max` of 4 and 10 is 10 and `Math.min` of 6 and 10 is 6.   |
 | 6          |    1|    **6**|    4|    6|                  8| `Math.max` of 4 and 8 is 8 and `Math.min` of 6 and 8 is 6. |
@@ -352,9 +352,9 @@ For example, array $A$ such that:
 
 contains the following example slices:
 
-- slice (1, 2), whose average is (2 + 2) / 2 = 2;
-- slice (3, 4), whose average is (5 + 1) / 2 = 3;
-- slice (1, 4), whose average is (2 + 2 + 5 + 1) / 4 = 2.5.
+- slice ${(1, 2)}$, whose average is ${(2 + 2) / 2 = 2}$;
+- slice ${(3, 4)}$, whose average is ${(5 + 1) / 2 = 3}$;
+- slice ${(1, 4)}$, whose average is ${(2 + 2 + 5 + 1) / 4 = 2.5}$.
 
 The goal is to find the starting position of a slice whose average is minimal.
 
@@ -366,7 +366,7 @@ Write a function:
 
 that, given a non-empty array $A$ consisting of $N$ integers, returns the starting position of the slice with the minimal average. If there is more than one slice with a minimal average, you should return the smallest starting position of such a slice.
 
-For example, given array A such that:
+For example, given array $A$ such that:
 
 ```js
     A[0] = 4
