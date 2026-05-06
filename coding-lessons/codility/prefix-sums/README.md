@@ -274,7 +274,7 @@ Then clamp within bounds:
 
 ---
 
-## Final intuition
+### Final intuition
 
 Both loops follow the same pattern:
 
@@ -320,7 +320,7 @@ Evaluations of `leftPos` in the first loop is shown in the table below.
 | 0         |    1|**0**|    4|    6|                    0| `Math.min` of 4 and 0 is 0 and `Math.max` of 0 and 0 is 0. |
 | 2         |    2|    0|    4|    6|                **2**| `Math.min` of 4 and 2 is 2 and `Math.max` of 0 and 2 is 2. |
 
-### Minimum Average of Two Slices
+## Minimum Average of Two Slices
 
 **Problem:** 🟡
 A non-empty array $A$ consisting of $N$ integers is given. A pair of integers $(P, Q)$, such that $0 ≤ P < Q < N$, is called a _slice_ of array $A$ (notice that the slice contains at least two elements). The _average_ of a slice $(P, Q)$ is the sum of $A[P] + A[P + 1] + ... + A[Q]$ divided by the length of the slice. To be precise, the average equals $(A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1)$.
