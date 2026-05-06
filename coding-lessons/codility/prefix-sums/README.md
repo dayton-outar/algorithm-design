@@ -61,6 +61,7 @@ The mushroom picker starts at spot $k = 4$ and should perform $m = 6$ moves. She
 **5.3: Mushroom picker - $O(n + m)$**
 ```js
 const mushrooms = (A, k, m) => {
+    // where k is the starting position of the muchroom picker and m is the number of allowed moves
     let n = A.length;
     let result = 0;
     const sums = prefixSums(A);
