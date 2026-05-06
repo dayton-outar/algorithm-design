@@ -58,33 +58,33 @@ An addendum based on a problem done on Codility as part of interview,
 
 ## Most Challenging Problems
 
-1. [Min Avg Two Slice](./prefix-sums#minimum-average-of-two-slices) &#x2713; 🟡
-2. [Genomic Range Query](./prefix-sums/GENOMIC.md) &#x2713;
-3. [Mushroom Picker](./prefix-sums#51-exercise) &#x2713; 🟡
-4. [Triangle](./sorting/TRIANGLE.md) &#x2713;
-5. [Number of Disc Intersections](./sorting/DISCS.md) &#x2713; 🟡
-6. [Fish](./stacks-queues/FISH.md) &#x2713; 🟢
-7. [Stone Wall](./stacks-queues/STONEWALL.md) &#x2713; 🟡
-8. [Equi Leader](./leader/EQUILEADER.md) &#x2713; 🟡
-9. [Max Profit](./maximum-slice/MAXPROFIT.md) &#x2713; 🟡
-10. [Max Slice Sum](./maximum-slice/MAXSLICESUM.md) &#x2713;
-11. [Max Double Slice Sum](./maximum-slice/MAXDOUBLESLICE.md) &#x2713; 🟡
-12. [Count Factors](./prime/COUNTFACTORS.md) &#x2713;
-13. [Minimum Perimeter Rectangle](./prime/MINPERIMETERRECTANGLE.md) &#x2713;
-14. [Flags](./prime/FLAGS.md) &#x2713; 🔴
-15. [Peaks](./prime/PEAKS.md) &#x2713; 🔴
-16. [Count Semiprimes](./sieve/COUNTSEMIPRIMES.md) &#x2713; 🟡
-17. [Count Nondivisible](./sieve/COUNTNONDIVISIBLE.md) &#x2713;
-18. [Chocolates by Numbers](./euclidean/CHOCOLATE.md) &#x2713; 🟡
-19. [Common Prime Divisors](./euclidean/COMMONPRIME.md) &#x2713; 🟡
-20. [Fib Frog](./fibonacci/FIBFROG.md) &#x2713; 🔴
-21. [Ladder](./fibonacci/LADDER.md) &#x2713; 🟡
-22. [Min-Max Division](./binary-search/MINMAXDIVISION.md) &#x2713; 🟡
-23. [Nailing Planks](./binary-search/NAILINGPLANKS.md) &#x2713; 🔴
-24. [Count Distinct Slices](./caterpillar/COUNTDISTINCT.md) &#x2713; 🟡
-25. [Count Triangle](./caterpillar/COUNTRIANGLES.md) &#x2713; 🟡
-26. [Min Absolute Sum of Two](./caterpillar/MINABSSUM.md) &#x2713; 🟡
-27. [Max Non-overlapping Segments](./greedy/MAXNONOVERLAPPING.md) &#x2713; 🟡
-28. [Tie Ropes](./greedy/TIEROPES.md) &#x2713;
-29. [Number Solitaire](./dynamic/SOLITAIRE.md) &#x2713; 🔴
-30. [Minimum Absolute Sum](./dynamic/MINABSSUM.md) &#x2713; 🟡
+1. 🟡 [Min Avg Two Slice](./prefix-sums#minimum-average-of-two-slices)
+2. 🟡 [Genomic Range Query](./prefix-sums/GENOMIC.md)
+3. 🟡 [Mushroom Picker](./prefix-sums#51-exercise) &#x2713; 
+4. 🟡 [Triangle](./sorting/TRIANGLE.md)
+5. 🟡 [Number of Disc Intersections](./sorting/DISCS.md) 
+6. 🟡 [Fish](./stacks-queues/FISH.md) 
+7. 🟡 [Stone Wall](./stacks-queues/STONEWALL.md) 
+8. 🟡 [Equi Leader](./leader/EQUILEADER.md) 
+9. 🟡 [Max Profit](./maximum-slice/MAXPROFIT.md) 
+10. 🟡[Max Slice Sum](./maximum-slice/MAXSLICESUM.md)
+11. 🟡 [Max Double Slice Sum](./maximum-slice/MAXDOUBLESLICE.md) 
+12. 🟢 [Count Factors](./prime/COUNTFACTORS.md)
+13. 🟢 [Minimum Perimeter Rectangle](./prime/MINPERIMETERRECTANGLE.md)
+14. 🔴 [Flags](./prime/FLAGS.md) 
+15. 🔴 [Peaks](./prime/PEAKS.md) 
+16. 🟡 [Count Semiprimes](./sieve/COUNTSEMIPRIMES.md) 
+17. 🔴 [Count Nondivisible](./sieve/COUNTNONDIVISIBLE.md)
+18. 🟡 [Chocolates by Numbers](./euclidean/CHOCOLATE.md) 
+19. 🟡 [Common Prime Divisors](./euclidean/COMMONPRIME.md) 
+20. 🔴 [Fib Frog](./fibonacci/FIBFROG.md) 
+21. 🟡 [Ladder](./fibonacci/LADDER.md) 
+22. 🟡 [Min-Max Division](./binary-search/MINMAXDIVISION.md) 
+23. 🔴 [Nailing Planks](./binary-search/NAILINGPLANKS.md) 
+24. 🟡 [Count Distinct Slices](./caterpillar/COUNTDISTINCT.md) 
+25. 🟡 [Count Triangle](./caterpillar/COUNTRIANGLES.md) 
+26. 🟡 [Min Absolute Sum of Two](./caterpillar/MINABSSUM.md) 
+27. 🟡 [Max Non-overlapping Segments](./greedy/MAXNONOVERLAPPING.md) 
+28. 🟢 [Tie Ropes](./greedy/TIEROPES.md)
+29. 🔴 [Number Solitaire](./dynamic/SOLITAIRE.md) 
+30. 🟡 [Minimum Absolute Sum](./dynamic/MINABSSUM.md) 
