@@ -203,6 +203,10 @@ which simplifies to:
 (k + m) - 2 * i
 ```
 
+For example (as shown in the table under [Stepping Through](#stepping-through)), assuming starting position (`k`) is 4 and only 6 moves (`m`) are allowed,
+
+* If the picker moves to the left once (to index 3), she has to return to index 4 and that takes up 2 moves, only leaving 4 left. She can only change direction once. So, she continues 4 moves to the right, placing her at index 8 (which is out of bounds). Hence, the need for `(k + m) - 2 * i`, which for this case works to ${(6 + 4) - (2 * 1)}$.
+
 ---
 
 The surrounding bounds ensure validity:
@@ -289,6 +293,8 @@ m - 2 * i
 And once the range `[leftPos, rightPos]` is defined, the prefix sum array lets us compute the total mushrooms in constant time—making the entire solution efficient.
 
 ---
+
+### Stepping Through
 
 Let's step through the case of passing an array of `[2, 3, 7, 5, 1, 3, 9]`, an initial position of `4` and allowed moves of `6`. While stepping through the focus will be on watching how the line of code below evaluates the right-most position.
 
