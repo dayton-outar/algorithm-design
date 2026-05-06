@@ -91,6 +91,13 @@ The total time complexity of such a solution is $O(n + m)$.
 
 In the `mushrooms` function, there are two loops. Each loop evaluates a possible range of positions and computes the **maximum sum of mushrooms collected over a contiguous segment**.
 
+The function checks the two possible optimal patterns:
+
+1. **Go left first, then turn right**
+2. **Go right first, then turn left**
+
+Because once you change direction, changing again is pointless for maximizing a continuous collected range.
+
 Importantly, the loops do **not** sum directly over the original array `A`. Instead, they use the **prefix sum array** produced by `prefixSums(A)`. This allows the function to compute the total mushrooms between any two positions (`leftPos` and `rightPos`) in constant time using:
 
 ```js
