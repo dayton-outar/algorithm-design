@@ -25,7 +25,7 @@ const mushrooms = (A, k, m) => { // k = initial spot, m = number of moves
     // Going left first, then right
     for ( let i = 0; i < (Math.min(m , k) + 1); i++ ) {
         let leftPos = k - i;
-        let rightPos = Math.min( n - 1, Math.max( k, ( (k + m) - 2 * i ) ) );
+        let rightPos = Math.min( n - 1, Math.max( k, ( k + (m - 2 * i ) ) ) );
         result = Math.max( result, countTotal( sums, leftPos, rightPos ) );
         console.log(`moving left ${i} places then right ${m} places to ${( (k + m) - 2 * i)} but bound to ${rightPos} ---> ${result}` );
     }
