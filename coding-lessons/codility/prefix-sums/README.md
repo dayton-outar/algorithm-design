@@ -393,35 +393,76 @@ According to Dan Avramescu,
 >
 > The trick here is to figure out that you only need to find the minimum average of slices which are 2 or 3 in length. That is because ***a slice of 4 or larger is basically a sum of slices with the length of 2 or 3. A composed slice will never have an average sum lower than its components.***
 
+Because any slice of length **4 or more** can be broken into smaller slices of length **2 and/or 3**, and the average of the whole cannot be less than all of its parts.
+
+Example length 4:
+
+```txt
+[a, b, c, d]
+```
+
+Break it into two slices:
+
+```txt
+[a, b] and [c, d]
+```
+
+If the whole slice had a smaller average than both pairs, that would be impossible, because the whole average is just a weighted average of the two pair averages.
+
+Example:
+
+```txt
+avg([a,b,c,d]) = (sum([a,b]) + sum([c,d])) / 4
+```
+
+That is the same as averaging the two 2-slice averages.
+
+So at least one of `[a,b]` or `[c,d]` must have average **less than or equal to** the full 4-slice average.
+
+Same idea for longer slices:
+
+```txt
+length 5 = 2 + 3
+length 6 = 3 + 3 or 2 + 2 + 2
+length 7 = 2 + 2 + 3
+length 8 = 2 + 3 + 3
+...
+```
+
+Every length ≥ 4 can be made from 2s and 3s.
+
+So if a long slice has the minimum average, one of its internal 2- or 3-length parts must have an average no greater than it. Therefore the true minimum must appear in a slice of length **2 or 3**.
+
+So the efficient solution is:
+
 ```js
-// Credit: https://github.com/yaseenshaik/codility-solutions-javascript/blob/master/MinAvgTwoSlice.md
 function solution(A) {
-    var start = 0;
- 
-    var currentSum = A[0] + A[1];
-    var minAvgSlice = currentSum / 2;
+  let minAvg = Infinity;
+  let minIndex = 0;
 
-    for (var i = 2; i < A.length; i++) {
-       currentSum += A[i];
-       var newAvg = currentSum / 3;
+  for (let i = 0; i < A.length - 1; i++) {
+    const avg2 = (A[i] + A[i + 1]) / 2;
 
-       if (newAvg < minAvgSlice) {
-          minAvgSlice = newAvg;
-          start = i - 2;
-       }
- 
-       currentSum -= A[i-2];
-       newAvg = currentSum / 2;
-
-       if (newAvg < minAvgSlice) {
-          minAvgSlice = newAvg;
-          start = i - 1;
-       }
+    if (avg2 < minAvg) {
+      minAvg = avg2;
+      minIndex = i;
     }
- 
-    return start;
- }
- ```
+
+    if (i < A.length - 2) {
+      const avg3 = (A[i] + A[i + 1] + A[i + 2]) / 3;
+
+      if (avg3 < minAvg) {
+        minAvg = avg3;
+        minIndex = i;
+      }
+    }
+  }
+
+  return minIndex;
+}
+```
+
+Key idea: **you do not search all slices; you only check every slice of length 2 and 3.**
 
 ## References
 
