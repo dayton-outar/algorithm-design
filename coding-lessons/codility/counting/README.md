@@ -29,7 +29,7 @@ The limitation here may be available memory. Usually, we are not able to create 
 
 Counting the number of negative integers can be done in two ways. The ﬁrst method is to add some big number to each value: so that, all values would be greater than or equal to zero. That is, we shift the representation of zero by some arbitrary amount to accommodate all the negative numbers we need. In the second method, we simply create a second array for counting negative numbers.
 
-## 4.1. Exercise
+## 4.1. Exercise: Equal Sum Swap
 
 **Problem:** 🟡 You are given an integer $m$ $(1 \leq m \leq 1,000,000)$ and two non-empty, zero-indexed arrays $A$ and $B$ of $n$ integers, $a_0, a_1 ,\ldots , a_{n−1}$ and $b_0, b_1, \ldots, b_{n−1}$ respectively $(0 \leq a_i, b_i \leq m)$.
 
