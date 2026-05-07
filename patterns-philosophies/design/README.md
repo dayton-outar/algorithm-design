@@ -1,4 +1,4 @@
-# 🔖 Design Patterns
+# Design Patterns
 
 Below is a structured table of contents based on Refactoring.Guru’s design patterns catalog. ([Refactoring Guru][1])
 
@@ -35,9 +35,9 @@ Patterns for composing classes and objects cleanly.
 7. **[Bridge](https://refactoring.guru/design-patterns/bridge/typescript/example)**. ★★★★☆ — Separate abstraction from implementation so both can evolve independently.
 8. **[Composite](https://refactoring.guru/design-patterns/composite/typescript/example)**. ★★★★★ — Treat individual objects and object groups the same way.
 9. **[Decorator](https://refactoring.guru/design-patterns/decorator/typescript/example)**. ★★★★☆ — Add behavior by wrapping an object.
-10. **Facade** — Provide a simple interface over a complex subsystem.
-11. **Flyweight** — Save memory by sharing repeated object state.
-12. **Proxy** — Control access to another object through a stand-in.
+10. **[Facade](https://refactoring.guru/design-patterns/facade/typescript/example)**. ★★★★☆ — Provide a simple interface over a complex subsystem.
+11. **[Flyweight](https://refactoring.guru/design-patterns/flyweight/typescript/example)**. ★★☆☆☆ — Save memory by sharing repeated object state.
+12. **[Proxy](https://refactoring.guru/design-patterns/proxy/typescript/example)**. ★★★★☆ — Control access to another object through a stand-in.
 
 ### Observations
 
@@ -49,25 +49,72 @@ I gave the **Composite** pattern 5 stars. It’s widely used in UI frameworks li
 
 The **Decorator** pattern is structurally similar to the **Composite** pattern in that both use composition, but they serve different purposes. The **Decorator** dynamically adds new behavior to an object by wrapping it, without modifying the original implementation. I gave it 4 stars because it’s especially useful when you can’t change a library’s code but can extend its functionality through wrapping. It’s a practical and flexible workaround.
 
-...
+I think I have used the **Facade** pattern as a workaround to interface with a system that I cannot control, or when I want to enforce separation of concerns. It seems to overlap somewhat with the ideas behind the *Adapter* and *Bridge* patterns. Because of its practicality, I give it 4 stars.
+
+The **Flyweight** pattern seems more about using shared data structures than relying on polymorphism between objects. It enforces a design where many logical objects share a smaller number of physical instances. I struggle to see how this is an object-oriented pattern rather than just a data structure design. I give it 2 stars.
+
+While the **Proxy** pattern isn’t a frequent guest in most applications, it’s still very useful in certain cases. It’s especially valuable when you want to add behavior around an object of an existing class without changing the client code. It resembles the *Decorator* pattern. To be honest, it can be hard to see the difference between them. The **Proxy** pattern focuses on controlling access (e.g., lazy loading, security, caching, remote access), while the **Decorator** pattern focuses on dynamically adding responsibilities or behavior to an object. I give it 4 stars.
+
 
 ## 3. Behavioral Patterns
 
 Patterns for communication and responsibility between objects.
 
-13. **Chain of Responsibility** — Pass a request through handlers until one handles it.
-14. **Command** — Turn a request into an object so it can be queued, logged, or undone.
+13. **[Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility/typescript/example)**. ★★★★★ — Pass a request through handlers until one handles it.
+14. **[Command](https://refactoring.guru/design-patterns/command/typescript/example)** — Turn a request into an object so it can be queued, logged, or undone.
 15. **Iterator** — Traverse a collection without exposing its internal structure.
 16. **Mediator** — Centralize communication between related objects.
 17. **Memento** — Save and restore object state safely.
-18. **Observer** — Notify subscribers when an object changes.
+18. **Observer**. ★★★★★ — Notify subscribers when an object changes.
 19. **State** — Change behavior when internal state changes.
-20. **Strategy** — Swap algorithms without changing the object using them.
-21. **Template Method** — Define an algorithm skeleton and let subclasses fill in steps.
+20. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
+21. **Template Method**. ★★★★☆ — Define an algorithm skeleton and let subclasses fill in steps.
 22. **Visitor** — Add operations to objects without changing their classes.
 
 ### Observations
 
-...
+The **Chain of Responsibility** pattern is one of the craftiest patterns that makes efficient use of polymorphism. I love it. It shines when a request can be handled by multiple candidates, but you don’t want to hard-code which one handles it. It fits best in systems where responsibilities are flexible, ordered, or conditional—like event handling, middleware pipelines, or approval workflows. It helps you decouple the sender from the receiver, so you can add, remove, or reorder handlers without touching the calling code. I give it 5 stars.
 
-[1]: https://refactoring.guru/design-patterns/ "Design Patterns in Java"
+The **Command** pattern makes strong use of polymorphism, but it doesn’t impose a specific data structure like linked lists or trees, unlike the *Chain of Responsibility* and *Composite* patterns. This is a very useful pattern that I’ve seen in UI frameworks (menus, buttons, undo/redo), as well as in compilers and interpreters. I give it 5 stars.
+
+## A Great Example: Serilog
+
+**[Serilog](https://github.com/serilog/serilog?utm_source=chatgpt.com)** leans on a small set of patterns rather than a huge catalog. The important ones:
+
+### Core patterns you’ll see
+
+* **Builder (fluent configuration)**
+
+  * `LoggerConfiguration().WriteTo.File(...).Enrich.With(...)`
+  * Clear, chainable setup of a complex object.
+
+* **Pipeline / Chain of Responsibility (processing flow)**
+
+  * Events flow through enrichment → filtering → sinks.
+  * Each stage can modify or drop the event.
+
+* **Strategy (pluggable behavior)**
+
+  * Different sinks (file, console, Seq), formatters, filters.
+  * Swap behavior without changing calling code.
+
+* **Composite (fan-out to multiple sinks)**
+
+  * A logger can write to many sinks at once.
+
+* **Decorator (enrichers wrap events)**
+
+  * Enrichers add properties (timestamp, user, correlation id) without changing core logging.
+
+* **Factory (creation behind configuration)**
+
+  * `CreateLogger()` builds the final logger from config.
+
+* **Adapter (integration layer)**
+
+  * Bridges to other logging systems (e.g., Microsoft.Extensions.Logging).
+
+Serilog is basically a **configurable pipeline of strategies**, built with a fluent builder and composed into a composite logger. That’s why it feels flexible instead of rigid. It’s **not heavily inheritance-driven**; it’s more composition + pipeline. The power comes from **composing small behaviors**, not deep class hierarchies.
+
+
+[1]: https://refactoring.guru/design-patterns/ "Design Patterns"
