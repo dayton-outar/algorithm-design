@@ -61,7 +61,7 @@ While the **Proxy** pattern isn’t a frequent guest in most applications, it’
 Patterns for communication and responsibility between objects.
 
 13. **[Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility/typescript/example)**. ★★★★★ — Pass a request through handlers until one handles it.
-14. **[Command](https://refactoring.guru/design-patterns/command/typescript/example)** — Turn a request into an object so it can be queued, logged, or undone.
+14. **[Command](https://refactoring.guru/design-patterns/command/typescript/example)**. ★★★★★ — Turn a request into an object so it can be queued, logged, or undone.
 15. **Iterator** — Traverse a collection without exposing its internal structure.
 16. **Mediator** — Centralize communication between related objects.
 17. **Memento** — Save and restore object state safely.
