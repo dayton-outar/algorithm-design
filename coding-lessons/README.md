@@ -51,5 +51,5 @@ The goal is simple:
 
 If you can do that consistently, the “genius moments” stop being rare.
 
- - [Codility Lessons](./coding-lessons/codility/)
- - [LeetCode Lessons](./coding-lessons/leetcode/)
+ - [Codility Lessons](./codility/)
+ - [LeetCode Lessons](./leetcode/)
