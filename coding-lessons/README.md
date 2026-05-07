@@ -16,8 +16,6 @@ For example, instead of evaluating every possible scenario, they ask whether sol
 
 This repository is built around that mindset.
 
----
-
 ## The Working Method
 
 When tackling problems here, the goal is not just to arrive at a correct solution, but to build a repeatable thinking process:
@@ -36,8 +34,6 @@ When tackling problems here, the goal is not just to arrive at a correct solutio
 
 5. **Generalize the Pattern**
    Once something works for small inputs, expand it carefully. This step turns observation into an algorithm.
-
----
 
 ## What This Repo Is Really About
 
