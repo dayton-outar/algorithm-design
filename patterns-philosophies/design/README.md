@@ -47,13 +47,13 @@ I find that the **Bridge** pattern makes use of dependency inversion and open-cl
 
 I gave the **Composite** pattern 5 stars. It’s widely used in UI frameworks like Flutter, where everything that renders is a widget. Widgets are composed into a tree structure, allowing individual widgets and groups of widgets to be treated uniformly. This starts with simple building blocks and scales naturally to more complex interfaces.
 
-The **Decorator** pattern is structurally similar to the **Composite** pattern in that both use composition, but they serve different purposes. The **Decorator** dynamically adds new behavior to an object by wrapping it, without modifying the original implementation. I gave it 4 stars because it’s especially useful when you can’t change a library’s code but can extend its functionality through wrapping. It’s a practical and flexible workaround.
+The **Decorator** pattern is structurally similar to the *Composite* pattern in that both use composition, but they serve different purposes. The *Decorator* dynamically adds new behavior to an object by wrapping it, without modifying the original implementation. I gave it 4 stars because it’s especially useful when you can’t change a library’s code but can extend its functionality through wrapping. It’s a practical and flexible workaround.
 
 I think I have used the **Facade** pattern as a workaround to interface with a system that I cannot control, or when I want to enforce separation of concerns. It seems to overlap somewhat with the ideas behind the *Adapter* and *Bridge* patterns. Because of its practicality, I give it 4 stars.
 
 The **Flyweight** pattern seems more about using shared data structures than relying on polymorphism between objects. It enforces a design where many logical objects share a smaller number of physical instances. I struggle to see how this is an object-oriented pattern rather than just a data structure design. I give it 2 stars.
 
-While the **Proxy** pattern isn’t a frequent guest in most applications, it’s still very useful in certain cases. It’s especially valuable when you want to add behavior around an object of an existing class without changing the client code. It resembles the *Decorator* pattern. To be honest, it can be hard to see the difference between them. The **Proxy** pattern focuses on controlling access (e.g., lazy loading, security, caching, remote access), while the **Decorator** pattern focuses on dynamically adding responsibilities or behavior to an object. I give it 4 stars.
+While the **Proxy** pattern isn’t a frequent guest in most applications, it’s still very useful in certain cases. It’s especially valuable when you want to add behavior around an object of an existing class without changing the client code. It resembles the *Decorator* pattern. To be honest, it can be hard to see the difference between them. The *Proxy* pattern focuses on controlling access (e.g., lazy loading, security, caching, remote access), while the *Decorator* pattern focuses on dynamically adding responsibilities or behavior to an object. I give it 4 stars.
 
 
 ## 3. Behavioral Patterns
