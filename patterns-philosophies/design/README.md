@@ -63,12 +63,12 @@ Patterns for communication and responsibility between objects.
 13. **[Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility/typescript/example)**. ★★★★★ — Pass a request through handlers until one handles it.
 14. **[Command](https://refactoring.guru/design-patterns/command/typescript/example)**. ★★★★★ — Turn a request into an object so it can be queued, logged, or undone.
 15. **[Iterator](https://refactoring.guru/design-patterns/iterator/typescript/example)**. ★★★★☆ — Traverse a collection without exposing its internal structure.
-16. **Mediator** — Centralize communication between related objects.
-17. **Memento** — Save and restore object state safely.
-18. **[Observer](https://refactoring.guru/design-patterns/observer/typescript/example)**. ★★★★★ — Notify subscribers when an object changes.
-19. **State** — Change behavior when internal state changes.
-20. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
-21. **[Template Method](https://refactoring.guru/design-patterns/template-method/typescript/example)**. ★★★★★ — Define an algorithm skeleton and let subclasses fill in steps.
+16. **[Observer](https://refactoring.guru/design-patterns/observer/typescript/example)**. ★★★★★ — Notify subscribers when an object changes.
+17. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
+18. **[Template Method](https://refactoring.guru/design-patterns/template-method/typescript/example)**. ★★★★★ — Define an algorithm skeleton and let subclasses fill in steps.
+19. **Mediator** — Centralize communication between related objects.
+20. **Memento** — Save and restore object state safely.
+21. **State** — Change behavior when internal state changes.
 22. **Visitor** — Add operations to objects without changing their classes.
 
 ### Observations
@@ -79,15 +79,103 @@ The **Command** pattern makes strong use of polymorphism, but it doesn’t impos
 
 I’ve seen the **Iterator** pattern used extensively in C++ collections and the algorithms library. It provides a structured way to traverse collections through loops while decoupling traversal logic from the underlying container implementation. Iterators are important because they provide a common abstraction over different data structures. Algorithms like `sort`, `find`, and `copy` can operate on vectors, lists, sets, and even custom containers without needing to know how those containers store their data internally. It comes in handy in functional programming philosophy to write algorithms independently from data structures. It makes excellent use of generics (or templates as it is called in C++). I'm not an extremist when designing separation of concerns. I don't like to go overboard. It may not be necessary in all cases. I give it a 4 star.
 
-...
-
 I’ve never directly implemented the **Observer** pattern myself, but I’ve used event-driven frameworks that rely heavily on it. I strongly believe in event-driven architectures, and this pattern is one of the key mechanisms that makes them possible. I’d give it 5 stars.
-
-...
 
 I make use of the **Strategy** pattern when injecting services into classes, especially when using IoC containers. It is a very elegant pattern that allows behaviour to be swapped dynamically. I’d give it 5 stars.
 
 The **Template Method** was the first design pattern I learned when I started programming with object-oriented languages. It allows the behaviour of objects to be modified through inheritance, sometimes by requiring certain functions to be overridden. It is an extremely powerful pattern. I give it 5 stars.
+
+---
+
+> “The most popular usage of the **Mediator** pattern is facilitating communications between GUI components of an app. The synonym of the Mediator is the Controller part of MVC pattern.”
+
+Think of the Model–View–Controller Controller as a **traffic cop** between UI elements and application logic.
+
+Without a mediator/controller:
+
+* Button talks directly to textbox
+* Textbox talks directly to list
+* List talks directly to dialog
+* Everything becomes tightly coupled
+
+That creates a mess.
+
+The Mediator pattern says:
+
+> “UI components should not communicate directly with each other.
+> They should communicate through a central object.”
+
+Example without Mediator:
+
+```js
+button.onclick = () => {
+    textbox.clear();
+    list.reload();
+    dialog.show();
+};
+```
+
+Now the button knows too much.
+
+With Mediator:
+
+```js
+button.onclick = () => {
+    mediator.notify("button_clicked");
+};
+```
+
+Mediator:
+
+```js
+class Mediator {
+    notify(event) {
+        if (event === "button_clicked") {
+            textbox.clear();
+            list.reload();
+            dialog.show();
+        }
+    }
+}
+```
+
+Now:
+
+* button only knows mediator
+* textbox only knows mediator
+* list only knows mediator
+
+This reduces coupling.
+
+Why MVC Controller is similar:
+
+* View sends user action to Controller
+* Controller decides what happens
+* Views don’t directly manipulate each other
+
+Example:
+
+* User clicks “Save”
+* View tells Controller
+* Controller validates data
+* Controller updates model
+* Controller refreshes views
+
+The Controller is mediating coordination.
+
+The key mental model:
+
+> Mediator = central communication hub.
+
+Like:
+
+* airport control tower
+* WhatsApp group admin
+* orchestra conductor
+
+The participants don’t coordinate directly with everyone else.
+They coordinate through the mediator.
+
 
 ## A Great Example: Serilog
 
