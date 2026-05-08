@@ -42,7 +42,7 @@ countTotal([ 0, 2, 3, 8, 11, 13 ], 1, 2); // 8 - 2 = 6
 
 We have calculated the total of $a_x + a_{x - 1} + \ldots + a_{y - 1} + a_y$ in $O(1)$ time. Using this approach, the total time complexity is $O(n + m)$.
 
-## 5.1. Exercise
+## 5.1. Exercise: Mushroom Picker
 
 **Problem:** 🟡 You are given a non-empty, zero-indexed array $A$ of $n$ $(1 \leq n \leq 100,000)$ integers $a_0 ,a_1 , \ldots, a_{n − 1}$ $(0 \leq a_i \leq 1,000)$. This array represents number of mushrooms growing on the consecutive spots along a road. You are also given integers $k$ and $m$ $(0 \leq k, m < n)$. 
 
@@ -335,7 +335,7 @@ Evaluations of `leftPos` in the first loop is shown in the table below.
 
 ## Minimum Average of Two Slices
 
-**Problem:** 🟡
+**Problem:** 🟢
 A non-empty array $A$ consisting of $N$ integers is given. A pair of integers $(P, Q)$, such that $0 ≤ P < Q < N$, is called a _slice_ of array $A$ (notice that the slice contains at least two elements). The _average_ of a slice $(P, Q)$ is the sum of $A[P] + A[P + 1] + ... + A[Q]$ divided by the length of the slice. To be precise, the average equals $(A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1)$.
 
 For example, array $A$ such that:
