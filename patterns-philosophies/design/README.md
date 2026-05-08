@@ -62,13 +62,13 @@ Patterns for communication and responsibility between objects.
 
 13. **[Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility/typescript/example)**. ★★★★★ — Pass a request through handlers until one handles it.
 14. **[Command](https://refactoring.guru/design-patterns/command/typescript/example)**. ★★★★★ — Turn a request into an object so it can be queued, logged, or undone.
-15. **Iterator** — Traverse a collection without exposing its internal structure.
+15. **[Iterator](https://refactoring.guru/design-patterns/iterator/typescript/example)**. ★★★★☆ — Traverse a collection without exposing its internal structure.
 16. **Mediator** — Centralize communication between related objects.
 17. **Memento** — Save and restore object state safely.
-18. **Observer**. ★★★★★ — Notify subscribers when an object changes.
+18. **[Observer](https://refactoring.guru/design-patterns/observer/typescript/example)**. ★★★★★ — Notify subscribers when an object changes.
 19. **State** — Change behavior when internal state changes.
 20. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
-21. **Template Method**. ★★★★☆ — Define an algorithm skeleton and let subclasses fill in steps.
+21. **[Template Method](https://refactoring.guru/design-patterns/template-method/typescript/example)**. ★★★★★ — Define an algorithm skeleton and let subclasses fill in steps.
 22. **Visitor** — Add operations to objects without changing their classes.
 
 ### Observations
@@ -76,6 +76,18 @@ Patterns for communication and responsibility between objects.
 The **Chain of Responsibility** pattern is one of the craftiest patterns that makes efficient use of polymorphism. I love it. It shines when a request can be handled by multiple candidates, but you don’t want to hard-code which one handles it. It fits best in systems where responsibilities are flexible, ordered, or conditional—like event handling, middleware pipelines, or approval workflows. It helps you decouple the sender from the receiver, so you can add, remove, or reorder handlers without touching the calling code. I give it 5 stars.
 
 The **Command** pattern makes strong use of polymorphism, but it doesn’t impose a specific data structure like linked lists or trees, unlike the *Chain of Responsibility* and *Composite* patterns. This is a very useful pattern that I’ve seen in UI frameworks (menus, buttons, undo/redo), as well as in compilers and interpreters. I give it 5 stars.
+
+I’ve seen the **Iterator** pattern used extensively in C++ collections and the algorithms library. It provides a structured way to traverse collections through loops while decoupling traversal logic from the underlying container implementation. Iterators are important because they provide a common abstraction over different data structures. Algorithms like `sort`, `find`, and `copy` can operate on vectors, lists, sets, and even custom containers without needing to know how those containers store their data internally. It comes in handy in functional programming philosophy to write algorithms independently from data structures. It makes excellent use of generics (or templates as it is called in C++). I'm not an extremist when designing separation of concerns. I don't like to go overboard. It may not be necessary in all cases. I give it a 4 star.
+
+...
+
+I’ve never directly implemented the **Observer** pattern myself, but I’ve used event-driven frameworks that rely heavily on it. I strongly believe in event-driven architectures, and this pattern is one of the key mechanisms that makes them possible. I’d give it 5 stars.
+
+...
+
+I make use of the **Strategy** pattern when injecting services into classes, especially when using IoC containers. It is a very elegant pattern that allows behaviour to be swapped dynamically. I’d give it 5 stars.
+
+The **Template Method** was the first design pattern I learned when I started programming with object-oriented languages. It allows the behaviour of objects to be modified through inheritance, sometimes by requiring certain functions to be overridden. It is an extremely powerful pattern. I give it 5 stars.
 
 ## A Great Example: Serilog
 
