@@ -100,6 +100,8 @@ const platinumLeader = A => {
                 size++;
             }
         }
+
+        console.log(`value: ${value}; size: ${size}`);
     }
 
     let candidate = -1;

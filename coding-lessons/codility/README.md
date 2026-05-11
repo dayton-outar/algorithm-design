@@ -2,15 +2,15 @@
 
 Significant lessons from Codility,
 
-- [Counting Elements](./counting/)
+- [Counting Elements](./counting/) &#x2713;
 
   Creating a hashtable to count occurrences of an element
 
-- [Prefix Sums](./prefix-sums/)
+- [Prefix Sums](./prefix-sums/) &#x2713;
   
   Perfect for best performing algorithm to get sum of slices
 
-- [Leader](./leader/)
+- [Leader](./leader/) &#x2713;
 
   Ways to identify an element that occurs more than once
 

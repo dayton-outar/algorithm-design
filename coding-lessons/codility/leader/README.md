@@ -6,7 +6,7 @@ Let us consider a sequence $a_0, a_1 , \ldots, a_{n − 1}$. The leader of this 
 
 In the picture the leader is highlighted in gray. Notice that the sequence can have at most one leader. If there were two leaders then their total occurrences would be more than $2 · {n \over 2} = n$, but we only have $n$ elements.
 
-The leader may be found in many ways. We describe some methods here, starting with trivial, slow ideas and ending with very creative, fast algorithms. The task is to ﬁnd the value of the leader of the sequence $a_0, a_1 , \ldots, a_{n − 1}$, such that $0 \leq ai \leq 10^9$. If there is no leader, the result should be -1.
+The leader may be found in many ways. We describe some methods here, starting with trivial, slow ideas and ending with very creative, fast algorithms. The task is to ﬁnd the value of the leader of the sequence $a_0, a_1 , \ldots, a_{n − 1}$, such that $0 \leq a_i \leq 10^9$. If there is no leader, the result should be -1.
 
 ## 8.1. Solution with $O(n^2)$ time complexity
 
@@ -177,6 +177,50 @@ platinumLeader( [6, 8, 6, 4, 6, 8, 3, 3] ); // 3
 Notice that if the array $[6, 8, 6, 4, 6, 8, 6]$ is used where 6's show up more than half the size of the array, the result from `platinumLeader` identifies the number, 6, as the leader. The same function, `platinumLeader`, returns -1 for $[6, 8, 6, 4, 6, 8]$, which means no leader exists within this array. But to hack or crash this function we just need to submit a test case that would fail the test such as $[6, 8, 6, 4, 6, 8, 3, 3]$. The number 3 is not the leader of $[6, 8, 6, 4, 6, 8, 3, 3]$. There are no leaders in that array and this is the reason for the second loop.
 
 I believe that instead of using `size` variable, an array could have been used instead to achieve the same result. Since JavaScript arrays contain the `push` and `pop` method, that array could have been treated as a stack to get the same result.
+
+If I replace the `size` + `value` approach with an actual stack array using `push()` and `pop()`, the time complexity would still be:
+
+* **Time:** `O(n)`
+* **Space:** `O(n)` worst case
+
+The current implementation is basically the optimized form of a stack-based algorithm (the Boyer–Moore majority vote idea).
+
+Example stack version:
+
+```js
+const diamondLeader = A => {
+    const stack = [];
+
+    for (let i = 0; i < A.length; i++) {
+        if (stack.length === 0) {
+            stack.push(A[i]);
+        } else if (stack[stack.length - 1] === A[i]) {
+            stack.push(A[i]);
+        } else {
+            stack.pop();
+        }
+    }
+
+    return stack.length > 0 ? stack[0] : -1;
+}
+```
+
+Why still `O(n)`?
+
+* Each element is processed once.
+* `push()` is amortized `O(1)`
+* `pop()` is `O(1)`
+
+So total work grows linearly with `n`.
+
+The important difference is memory:
+
+| Approach           | Time   | Space             |
+| ------------------ | ------ | ----------------- |
+| `size` + `value`   | `O(n)` | `O(1)`            |
+| Actual stack array | `O(n)` | `O(n)` worst case |
+
+The `platinumLeader` approach is better because it compresses the stack state into just two variables.
 
 ## References
 
