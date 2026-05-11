@@ -66,7 +66,7 @@ Patterns for communication and responsibility between objects.
 16. **[Observer](https://refactoring.guru/design-patterns/observer/typescript/example)**. ★★★★★ — Notify subscribers when an object changes.
 17. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
 18. **[Template Method](https://refactoring.guru/design-patterns/template-method/typescript/example)**. ★★★★★ — Define an algorithm skeleton and let subclasses fill in steps.
-19. **Mediator** — Centralize communication between related objects.
+19. **[Mediator](https://refactoring.guru/design-patterns/mediator/typescript/example)**. ★★★★☆ — Centralize communication between related objects.
 20. **Memento** — Save and restore object state safely.
 21. **State** — Change behavior when internal state changes.
 22. **Visitor** — Add operations to objects without changing their classes.
@@ -85,7 +85,11 @@ I make use of the **Strategy** pattern when injecting services into classes, esp
 
 The **Template Method** was the first design pattern I learned when I started programming with object-oriented languages. It allows the behaviour of objects to be modified through inheritance, sometimes by requiring certain functions to be overridden. It is an extremely powerful pattern. I give it 5 stars.
 
----
+The **[Mediator](#the-mediator-pattern)** pattern is not immediately intuitive to me but I do I use it in separating the UI from the API and data layer in a controller within an MVC architecture. The main benefit is reducing coupling between components so that changes remain localized instead of rippling unpredictably throughout the system. By routing communication through a central coordinator, components become easier to replace, test, debug, and reason about because each part depends on fewer things directly. This also helps prevent circular dependencies and makes large applications and teams more manageable as the codebase grows in complexity. I give it 4 stars.
+
+
+
+## The Mediator Pattern
 
 > “The most popular usage of the **Mediator** pattern is facilitating communications between GUI components of an app. The synonym of the Mediator is the Controller part of MVC pattern.”
 
@@ -176,6 +180,67 @@ Like:
 The participants don’t coordinate directly with everyone else.
 They coordinate through the mediator.
 
+### Why is this important?
+
+Because software complexity compounds brutally.
+
+The Mediator pattern is not about “clean architecture aesthetics.” It’s about controlling the *rate at which complexity explodes*.
+
+Without mediation, relationships between components grow roughly like this:
+
+* 2 components → 1 relationship
+* 5 components → 10 relationships
+* 10 components → 45 relationships
+* 20 components → 190 relationships
+
+That’s the real problem.
+
+Every direct dependency creates:
+
+* assumptions
+* timing expectations
+* side effects
+* update risks
+* debugging paths
+
+The system becomes fragile.
+
+A tiny change in one component unexpectedly breaks others because they’re all entangled.
+
+Example:
+
+Suppose your app has:
+
+* form
+* validation panel
+* save button
+* notification popup
+* analytics tracker
+* autosave system
+* audit logger
+
+If each talks directly to others:
+
+```txt
+button → form
+button → popup
+button → logger
+form → validator
+validator → popup
+autosave → logger
+popup → analytics
+...
+```
+
+Now imagine changing validation rules.
+
+You suddenly break notifications.
+
+Why?
+
+Because hidden coupling accumulated.
+
+That’s what the mediator prevents.
 
 ## A Great Example: Serilog
 
