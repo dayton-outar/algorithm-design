@@ -2,6 +2,18 @@
 
 Below is a structured table of contents based on Refactoring.Guru’s design patterns catalog. ([Refactoring Guru][1])
 
+The typescript files within this folder can be executed with the following command.
+
+```bash
+npx tsx app.ts
+```
+
+Given that `tsx` is installed. `tsx` is installed using the following command.
+
+```bash
+npm install -D tsx
+```
+
 Take note of the author/contributor's rating.
 
 ## 1. Creational Patterns
@@ -67,9 +79,9 @@ Patterns for communication and responsibility between objects.
 17. **[Strategy](https://refactoring.guru/design-patterns/strategy/typescript/example)**. ★★★★☆ — Swap algorithms without changing the object using them.
 18. **[Template Method](https://refactoring.guru/design-patterns/template-method/typescript/example)**. ★★★★★ — Define an algorithm skeleton and let subclasses fill in steps.
 19. **[Mediator](https://refactoring.guru/design-patterns/mediator/typescript/example)**. ★★★★☆ — Centralize communication between related objects.
-20. **Memento** — Save and restore object state safely.
-21. **State** — Change behavior when internal state changes.
-22. **Visitor** — Add operations to objects without changing their classes.
+20. **[Memento](https://refactoring.guru/design-patterns/memento/typescript/example)**. ★★★★★ — Save and restore object state safely.
+21. **[State](https://refactoring.guru/design-patterns/state/typescript/example)**. ★★★★★ — Change behavior when internal state changes.
+22. **[Visitor](https://refactoring.guru/design-patterns/visitor/typescript/example)**. ★★★★☆ — Add operations to objects without changing their classes.
 
 ### Observations
 
@@ -87,6 +99,11 @@ The **Template Method** was the first design pattern I learned when I started pr
 
 The **[Mediator](#the-mediator-pattern)** pattern is not immediately intuitive to me but I do I use it in separating the UI from the API and data layer in a controller within an MVC architecture. The main benefit is reducing coupling between components so that changes remain localized instead of rippling unpredictably throughout the system. By routing communication through a central coordinator, components become easier to replace, test, debug, and reason about because each part depends on fewer things directly. This also helps prevent circular dependencies and makes large applications and teams more manageable as the codebase grows in complexity. I give it 4 stars.
 
+The **Memento** pattern is a behavioral design pattern used to capture and restore an object’s previous state without exposing its internal details. It is commonly used in features like undo/redo systems, transaction rollbacks, save-game functionality, version control systems such as Git, and application state snapshots. The pattern typically involves three roles: the originator (the object whose state is saved), the memento (the stored snapshot), and the caretaker (the component that manages the snapshots). I have rarely used it in my career so far because I have mostly built business applications that depend on libraries that use these patterns. It's not very popular but it is very very useful. I give it 5 stars.
+
+The **State** and _Template Method_ patterns often overlap because both use polymorphism to replace conditional logic and type checking. The State pattern changes an object’s behavior dynamically based on its current state, while the Template Method pattern defines a fixed algorithm structure and allows subclasses to customize certain steps. In practice, both patterns help software engineers build extensible systems by delegating behavior to specialized classes instead of relying on large `if` or `switch` statements. I rate it just the same as the _Template Method_. I give it 5 stars.
+
+The **Visitor** pattern externalizes operations that would otherwise accumulate inside the original classes. Instead of continuously adding methods such as `optimize()`, `generateCode()`, or `prettyPrint()` to an object hierarchy, specialized visitor classes are created to perform these operations externally. The original classes primarily expose their structure and data, while visitor classes contain the algorithms that operate on them. This approach is especially useful when the object structure is stable but new operations or processing passes need to be added frequently, such as in compiler AST or IR traversals. Very useful but since I have always control to add function to a class or use the _Decorator_ or _Facade_ pattern, I haven't had much need to use this pattern. I give it 4 stars.
 
 
 ## The Mediator Pattern

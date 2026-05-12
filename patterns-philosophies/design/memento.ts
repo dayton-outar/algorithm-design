@@ -54,6 +54,9 @@ class Originator {
 /**
  * The Memento interface provides a way to retrieve the memento's metadata, such
  * as creation date or name. However, it doesn't expose the Originator's state.
+ * 
+ * This abstraction is not required to demonstrate the **Memento** pattern.
+ * So, do not be distracted by it. The magic is in the `Originator` and the `Caretaker` classes.
  */
 interface Memento {
     getState(): string;
