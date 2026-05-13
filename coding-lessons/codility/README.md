@@ -60,16 +60,16 @@ An addendum based on a problem done on Codility as part of interview,
 
 1. 🟡 [Equal Sum Swap](./counting/#41-exercise-equal-sum-swap) &#x2713;
 1. 🟢 [Min Avg Two Slice](./prefix-sums#minimum-average-of-two-slices) &#x2713;
-1. 🟡 [Genomic Range Query](./prefix-sums/GENOMIC.md)
+1. 🟡 [Genomic Range Query](./prefix-sums/GENOMIC.md) &#x2713;
 1. 🟡 [Mushroom Picker](./prefix-sums#51-exercise) &#x2713; 
-1. 🟡 [Triangle](./sorting/TRIANGLE.md)
-1. 🟡 [Number of Disc Intersections](./sorting/DISCS.md) 
-1. 🟡 [Fish](./stacks-queues/FISH.md) 
-1. 🟡 [Stone Wall](./stacks-queues/STONEWALL.md) 
 1. 🟡 [Equi Leader](./leader/EQUILEADER.md) 
 1. 🟡 [Max Profit](./maximum-slice/MAXPROFIT.md) 
 1. 🟡 [Max Slice Sum](./maximum-slice/MAXSLICESUM.md)
 1. 🟡 [Max Double Slice Sum](./maximum-slice/MAXDOUBLESLICE.md) 
+1. 🟡 [Triangle](./sorting/TRIANGLE.md)
+1. 🟡 [Number of Disc Intersections](./sorting/DISCS.md) 
+1. 🟡 [Fish](./stacks-queues/FISH.md) 
+1. 🟡 [Stone Wall](./stacks-queues/STONEWALL.md) 
 1. 🟢 [Count Factors](./prime/COUNTFACTORS.md)
 1. 🟢 [Minimum Perimeter Rectangle](./prime/MINPERIMETERRECTANGLE.md)
 1. 🔴 [Flags](./prime/FLAGS.md) 
