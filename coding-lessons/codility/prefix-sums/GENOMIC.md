@@ -78,3 +78,65 @@ Let's deconstruct this solution.
 A brute force solution would give us an algorithm that is $O(n \cdot k)$, where $n$ is the length of the string $S$ and $k$ is the number of elements in the slices determined by $P$ and $Q$. But is a nested loop needed? If we just identify the letter in the string for each slice that has the lowest value. A search is done to find the lowest value first and progressively move up to the highest value.
 
 I find it interesting that Codility, returns a _detected time complexity_ for this solution as $O(n + k)$. I would expect that a loop is done in the Javascript string function, `indexOf` (See [here](https://learnersbucket.com/examples/algorithms/javascript-string-contains-substring/#:~:text=We%20are%20checking%20the%20substring,complexity%20is%20O(1).)). Would love if Codility can explain how they arrived at this deteceted time complexity. Maybe `indexOf` function for string apply a different algorithm from the `indexOf` function for array.
+
+Let:
+
+* `N = S.length`
+* `M = P.length` (number of queries)
+
+For each iteration of the loop:
+
+```js
+let ns = S.substring(P[i], Q[i] + 1);
+```
+
+This creates a substring of length up to `N`, so worst case:
+
+* `substring(...)` → **O(N)**
+
+Then:
+
+```js
+ns.indexOf('A')
+ns.indexOf('C')
+ns.indexOf('G')
+```
+
+Each `indexOf` can scan the substring:
+
+* each is **O(N)** worst case
+
+You do up to 3 scans per query, still:
+
+* **O(N)** per query
+
+Since the loop runs `M` times:
+
+$
+\large{ O(M \cdot N) }
+$
+
+So the overall time complexity is:
+
+$
+\large{ O(MN) }
+$
+
+Space complexity:
+
+* `substring` creates temporary strings up to size `N`
+* output array stores `M` results
+
+Overall auxiliary space is roughly:
+
+$
+\large{ O(N + M) }
+$
+
+This is the naive solution to the genomic range query problem. The optimal solution uses prefix sums and runs in:
+
+$
+\large{O(N + M)}
+$
+
+instead.

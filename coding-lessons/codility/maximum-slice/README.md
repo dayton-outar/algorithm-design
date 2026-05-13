@@ -1,6 +1,6 @@
 # 9. Maximum Slice Problem
 
-Let’s deﬁne a problem relating to maximum slices. You are given a sequence of n integers $a_0, a_1 , \ldots, a_{n − 1}$ and the task is to ﬁnd the slice with the largest sum. More precisely, we are looking for two indices $p$, $q$ such that the total $a_p + a_{p + 1} + \ldots + a_q$ is maximal. We assume that the slice can be empty and its sum equals 0.
+Let’s deﬁne a problem relating to maximum slices. You are given a sequence of ${ n }$ integers $a_0, a_1 , \ldots, a_{n − 1}$ and the task is to ﬁnd the slice with the largest sum. More precisely, we are looking for two indices $p$, $q$ such that the total $a_p + a_{p + 1} + \ldots + a_q$ is maximal. We assume that the slice can be empty and its sum equals 0.
 
 In the picture, the slice with the largest sum is highlighted in gray. The sum of this slice equals 10 and there is no slice with a larger sum. Notice that the slice we are looking for may contain negative integers, as shown above.
 

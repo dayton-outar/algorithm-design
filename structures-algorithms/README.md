@@ -10,7 +10,7 @@ Some fundamental data structures that are used for solving problems includes,
 3. 🔖 Stack
 4. [Queues](./queues/)
 5. [Dictionaries](./dictionaries/)
-6. [Graphs](./graphs/)
+6. 🔖 [Graphs](./graphs/)
 7. [Trees](./trees/)
 
 ## Algorithms
