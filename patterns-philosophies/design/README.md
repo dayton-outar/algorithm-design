@@ -298,5 +298,10 @@ That’s what the mediator prevents.
 
 Serilog is basically a **configurable pipeline of strategies**, built with a fluent builder and composed into a composite logger. That’s why it feels flexible instead of rigid. It’s **not heavily inheritance-driven**; it’s more composition + pipeline. The power comes from **composing small behaviors**, not deep class hierarchies.
 
+## Videos
+
+1. [Typescript Utility Types | TS Beginners Tutorial](https://youtu.be/YN4RoihmVKM?si=tdcv_KKn-53F7TKY) - [Dave Gray](https://www.youtube.com/@DaveGrayTeachesCode)
+1. [The 3 Laws of Writing Readable Code](https://youtu.be/-AzSRHiV9Cc?si=likEiQXhQ_OC3iYr)
+
 
 [1]: https://refactoring.guru/design-patterns/ "Design Patterns"

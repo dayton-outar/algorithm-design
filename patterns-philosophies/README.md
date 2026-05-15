@@ -551,3 +551,4 @@ Refactoring must be supported by a **solid suite of automated tests** to ensure 
 ## Videos
 
 1. [Testable Code Doesn't Mean "Interfaces Everywhere"](https://youtu.be/9fHk8p9N5z0?si=4K6UOxLGBZaVNQUj)
+2. [Why "Clean Architecture" is Killing Your Velocity](https://youtu.be/Lquxmvd-Gyg?si=HNxIYDg6J-NXAxvj)
