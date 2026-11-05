@@ -301,7 +301,8 @@ Serilog is basically a **configurable pipeline of strategies**, built with a flu
 ## Videos
 
 1. [Typescript Utility Types | TS Beginners Tutorial](https://youtu.be/YN4RoihmVKM?si=tdcv_KKn-53F7TKY) - [Dave Gray](https://www.youtube.com/@DaveGrayTeachesCode)
-1. [The 3 Laws of Writing Readable Code](https://youtu.be/-AzSRHiV9Cc?si=likEiQXhQ_OC3iYr)
+2. [The 3 Laws of Writing Readable Code](https://youtu.be/-AzSRHiV9Cc?si=likEiQXhQ_OC3iYr)
+3. [Declaring globals isn't that hard](https://youtu.be/0zp9bkEfaOc?si=BKjSWQToJB7KorJF)
 
 
 [1]: https://refactoring.guru/design-patterns/ "Design Patterns"
